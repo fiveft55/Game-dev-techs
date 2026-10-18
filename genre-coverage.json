@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "scope": "Representative reusable core algorithms for every family in docs/genres.md; not exhaustive genre implementations. All implemented IDs resolve to original Python code.",
+  "genres": [
+    {
+      "genre": "Arcade action",
+      "implemented": [
+        "player-movement",
+        "aabb-collision",
+        "score-lives",
+        "finite-state-machine",
+        "wave-spawner",
+        "animation-timeline"
+      ],
+      "remaining": "Game-specific scoring rules, enemy-pattern authoring, complete arcade game integration."
+    },
+    {
+      "genre": "Platform",
+      "implemented": [
+        "jump-controller",
+        "player-movement",
+        "aabb-collision",
+        "rigid-body-integration",
+        "camera-follow",
+        "animation-timeline"
+      ],
+      "remaining": "Slope and moving-platform contacts, wall jumps, ladders, 3D controller and level integration."
+    },
+    {
+      "genre": "Shooter",
+      "implemented": [
+        "projectile-sweep",
+        "raycasting",
+        "ability-cooldown",
+        "server-input-validation",
+        "snapshot-interpolation",
+        "interest-management"
+      ],
+      "remaining": "Weapon recoil, aim assistance, lag-compensated hit detection, complete renderer and network transport."
+    },
+    {
+      "genre": "Fighting / brawling",
+      "implemented": [
+        "combat-frames",
+        "aabb-collision",
+        "finite-state-machine",
+        "animation-timeline",
+        "rollback-resimulation"
+      ],
+      "remaining": "Combo input grammar, hitstop, animation-driven hitboxes, matchmaking and network rollback integration."
+    },
+    {
+      "genre": "Action adventure",
+      "implemented": [
+        "line-of-sight",
+        "grid-pathfinding",
+        "inventory",
+        "quest-objectives",
+        "dialogue-graph"
+      ],
+      "remaining": "Stealth perception cones/hearing, interconnected level streaming, interaction and puzzle scripting."
+    },
+    {
+      "genre": "Role-playing",
+      "implemented": [
+        "rpg-progression",
+        "quest-objectives",
+        "inventory",
+        "loot-table",
+        "turn-order",
+        "save-migration"
+      ],
+      "remaining": "Classes, equipment affixes, status effects, character creation, authored quests and balance."
+    },
+    {
+      "genre": "Roguelike / roguelite",
+      "implemented": [
+        "procedural-maze",
+        "turn-order",
+        "loot-table",
+        "deck-draw",
+        "save-migration"
+      ],
+      "remaining": "Dungeon room graphs, guaranteed progression, item synergies, run/meta-progression integration."
+    },
+    {
+      "genre": "Adventure / narrative",
+      "implemented": [
+        "dialogue-graph",
+        "quest-objectives",
+        "inventory",
+        "save-migration"
+      ],
+      "remaining": "Natural-language/parser commands, point-and-click interactions, localization and cinematics."
+    },
+    {
+      "genre": "Strategy",
+      "implemented": [
+        "grid-pathfinding",
+        "turn-order",
+        "resource-economy",
+        "fog-of-war",
+        "line-of-sight",
+        "building-placement"
+      ],
+      "remaining": "Formation movement, strategic AI, diplomacy, research trees, complete RTS or 4X simulation."
+    },
+    {
+      "genre": "Tower defense / MOBA",
+      "implemented": [
+        "wave-spawner",
+        "grid-pathfinding",
+        "ability-cooldown",
+        "projectile-sweep",
+        "resource-economy"
+      ],
+      "remaining": "Tower targeting policy, aggro, hero progression, lane rules and networked team matches."
+    },
+    {
+      "genre": "Simulation",
+      "implemented": [
+        "event-scheduler",
+        "resource-economy",
+        "building-placement",
+        "steering-arrival",
+        "rigid-body-integration"
+      ],
+      "remaining": "Domain-specific flight, traffic, farming, fluid, factory and population models; validated physical parameters."
+    },
+    {
+      "genre": "Racing",
+      "implemented": [
+        "racing-bicycle-model",
+        "racing-checkpoints",
+        "steering-arrival",
+        "camera-follow"
+      ],
+      "remaining": "Tire/suspension dynamics, track progress ranking, driving AI, continuous checkpoint gate geometry."
+    },
+    {
+      "genre": "Sports",
+      "implemented": [
+        "ball-reflection",
+        "rigid-body-integration",
+        "score-lives",
+        "turn-order",
+        "animation-timeline"
+      ],
+      "remaining": "Sport-specific rules, team tactics, possession, spin, officiating and character/ball contact integration."
+    },
+    {
+      "genre": "Puzzle",
+      "implemented": [
+        "match-grid",
+        "grid-pathfinding",
+        "level-editor-undo",
+        "finite-state-machine"
+      ],
+      "remaining": "Falling-block rotation systems, constraint solver, solvable level generator and puzzle-specific win conditions."
+    },
+    {
+      "genre": "Rhythm / music",
+      "implemented": [
+        "rhythm-judgement",
+        "animation-timeline",
+        "score-lives"
+      ],
+      "remaining": "Actual audio playback/clock adapter, latency calibration, chart format, holds and multiple lanes."
+    },
+    {
+      "genre": "Survival / crafting / sandbox",
+      "implemented": [
+        "crafting-recipes",
+        "inventory",
+        "chunk-coordinates",
+        "building-placement",
+        "save-migration"
+      ],
+      "remaining": "Hunger/temperature, terrain streaming and voxel meshing, survival AI and shared construction transactions."
+    },
+    {
+      "genre": "Multiplayer worlds",
+      "implemented": [
+        "server-input-validation",
+        "interest-management",
+        "snapshot-interpolation",
+        "replay-window",
+        "save-migration"
+      ],
+      "remaining": "Deployable authenticated server, secure transport, transactional database, world sharding and operational tests."
+    },
+    {
+      "genre": "Battle royale",
+      "implemented": [
+        "shrinking-zone",
+        "loot-table",
+        "projectile-sweep",
+        "interest-management",
+        "server-input-validation"
+      ],
+      "remaining": "Large-session transport, matchmaking, map drop rules, elimination/spectator rules and server performance."
+    },
+    {
+      "genre": "Party / social deduction",
+      "implemented": [
+        "ballot-resolution",
+        "finite-state-machine",
+        "dialogue-graph",
+        "server-input-validation"
+      ],
+      "remaining": "Secure role assignment and private role messages, session/lobby flow, reconnect and concrete minigames."
+    },
+    {
+      "genre": "Cards / board / tabletop",
+      "implemented": [
+        "deck-draw",
+        "turn-order",
+        "resource-economy",
+        "rollback-resimulation"
+      ],
+      "remaining": "Game-specific legal-move engine, hidden-information views, authoritative shuffle and adversarial tests."
+    },
+    {
+      "genre": "Educational / serious",
+      "implemented": [
+        "spaced-repetition",
+        "quest-objectives",
+        "dialogue-graph",
+        "score-lives"
+      ],
+      "remaining": "Subject-specific content, validated assessment, learner accessibility and privacy-preserving analytics."
+    },
+    {
+      "genre": "Idle / incremental",
+      "implemented": [
+        "offline-progress",
+        "resource-economy",
+        "ability-cooldown",
+        "save-migration"
+      ],
+      "remaining": "Prestige and exponential economies, balancing, transactional offline claims and trusted clock integration."
+    }
+  ],
+  "cross_cutting": [
+    "fixed-timestep",
+    "ascii-world",
+    "spatial-hash",
+    "cad-extrusion"
+  ]
+}

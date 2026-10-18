@@ -1,6 +1,6 @@
 # Source registry and legal reuse
 
-This first edition contains original educational code. The links below are a curated reading list, not bundled dependencies. Upstream availability, current license terms, vulnerabilities, and compatibility must be checked at the exact revision before importing code. No commercial game code or extracted assets have been copied. Link checking is recorded separately and does not establish that every page was substantively reviewed.
+This library contains original educational code, including the 32 additional genre mechanics in the second edition. The links below are a curated reading list, not bundled dependencies. Upstream availability, current license terms, vulnerabilities, and compatibility must be checked at the exact revision before importing code. No commercial game code or extracted assets have been copied. Link checking is recorded separately and does not establish that every page was substantively reviewed.
 
 ## Algorithms and engine architecture
 

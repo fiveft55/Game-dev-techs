@@ -102,4 +102,9 @@ class MechanicsTests(unittest.TestCase):
         assert all(0<=i<len(v) for triangle in f for i in triangle)
 
 if __name__=='__main__':
-    unittest.main(verbosity=2)
+    # Keep one entry point for both the original examples and the expanded library.
+    import sys
+    suite = unittest.defaultTestLoader.loadTestsFromTestCase(MechanicsTests)
+    suite.addTests(unittest.defaultTestLoader.discover(str(ROOT / 'tests')))
+    result = unittest.TextTestRunner(verbosity=2).run(suite)
+    sys.exit(0 if result.wasSuccessful() else 1)

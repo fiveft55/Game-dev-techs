@@ -149,5 +149,293 @@
       "python": "mechanics/cad-extrusion/python/example.py"
     },
     "status": "educational"
+  },
+  {
+    "id": "score-lives",
+    "title": "Score, lives, and extra lives",
+    "implementations": {
+      "python": "mechanics/score-lives/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_score_lives"
+  },
+  {
+    "id": "jump-controller",
+    "title": "Buffered jump and coyote time",
+    "implementations": {
+      "python": "mechanics/jump-controller/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_jump_controller"
+  },
+  {
+    "id": "projectile-sweep",
+    "title": "Swept projectile versus rectangle",
+    "implementations": {
+      "python": "mechanics/projectile-sweep/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_projectile_sweep"
+  },
+  {
+    "id": "combat-frames",
+    "title": "Attack startup, active, and recovery frames",
+    "implementations": {
+      "python": "mechanics/combat-frames/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_combat_frames"
+  },
+  {
+    "id": "line-of-sight",
+    "title": "Conservative grid line of sight",
+    "implementations": {
+      "python": "mechanics/line-of-sight/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_line_of_sight"
+  },
+  {
+    "id": "rpg-progression",
+    "title": "Experience levels and combat damage",
+    "implementations": {
+      "python": "mechanics/rpg-progression/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_rpg_progression"
+  },
+  {
+    "id": "quest-objectives",
+    "title": "Quest objective tracking",
+    "implementations": {
+      "python": "mechanics/quest-objectives/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_quest_objectives"
+  },
+  {
+    "id": "dialogue-graph",
+    "title": "Conditional branching dialogue",
+    "implementations": {
+      "python": "mechanics/dialogue-graph/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_dialogue_graph"
+  },
+  {
+    "id": "turn-order",
+    "title": "Deterministic initiative order",
+    "implementations": {
+      "python": "mechanics/turn-order/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_turn_order"
+  },
+  {
+    "id": "resource-economy",
+    "title": "Atomic resource purchase",
+    "implementations": {
+      "python": "mechanics/resource-economy/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_resource_economy"
+  },
+  {
+    "id": "fog-of-war",
+    "title": "Visible and explored fog of war",
+    "implementations": {
+      "python": "mechanics/fog-of-war/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_fog_of_war"
+  },
+  {
+    "id": "wave-spawner",
+    "title": "Timed enemy wave spawning",
+    "implementations": {
+      "python": "mechanics/wave-spawner/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_wave_spawner"
+  },
+  {
+    "id": "event-scheduler",
+    "title": "Discrete-event simulation scheduler",
+    "implementations": {
+      "python": "mechanics/event-scheduler/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_event_scheduler"
+  },
+  {
+    "id": "racing-checkpoints",
+    "title": "Ordered checkpoints and lap counting",
+    "implementations": {
+      "python": "mechanics/racing-checkpoints/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_racing_checkpoints"
+  },
+  {
+    "id": "ball-reflection",
+    "title": "Ball bounce against a surface",
+    "implementations": {
+      "python": "mechanics/ball-reflection/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_ball_reflection"
+  },
+  {
+    "id": "match-grid",
+    "title": "Match-three detection and gravity",
+    "implementations": {
+      "python": "mechanics/match-grid/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_match_grid"
+  },
+  {
+    "id": "rhythm-judgement",
+    "title": "Rhythm timing windows",
+    "implementations": {
+      "python": "mechanics/rhythm-judgement/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_rhythm_judgement"
+  },
+  {
+    "id": "crafting-recipes",
+    "title": "Batch crafting recipes",
+    "implementations": {
+      "python": "mechanics/crafting-recipes/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_crafting_recipes"
+  },
+  {
+    "id": "chunk-coordinates",
+    "title": "World-to-chunk coordinates",
+    "implementations": {
+      "python": "mechanics/chunk-coordinates/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_chunk_coordinates"
+  },
+  {
+    "id": "interest-management",
+    "title": "Server-side spatial interest filtering",
+    "implementations": {
+      "python": "mechanics/interest-management/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_interest_management"
+  },
+  {
+    "id": "shrinking-zone",
+    "title": "Battle royale shrinking safe zone",
+    "implementations": {
+      "python": "mechanics/shrinking-zone/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_shrinking_zone"
+  },
+  {
+    "id": "ballot-resolution",
+    "title": "Social deduction secret ballot resolution",
+    "implementations": {
+      "python": "mechanics/ballot-resolution/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_ballot_resolution"
+  },
+  {
+    "id": "deck-draw",
+    "title": "Seeded deck shuffle, draw, and discard",
+    "implementations": {
+      "python": "mechanics/deck-draw/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_deck_draw"
+  },
+  {
+    "id": "spaced-repetition",
+    "title": "Learning review scheduling",
+    "implementations": {
+      "python": "mechanics/spaced-repetition/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_spaced_repetition"
+  },
+  {
+    "id": "offline-progress",
+    "title": "Capped idle-game offline production",
+    "implementations": {
+      "python": "mechanics/offline-progress/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_offline_progress"
+  },
+  {
+    "id": "save-migration",
+    "title": "Versioned JSON save migration",
+    "implementations": {
+      "python": "mechanics/save-migration/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_save_migration"
+  },
+  {
+    "id": "ability-cooldown",
+    "title": "Ability charges and cooldown refill",
+    "implementations": {
+      "python": "mechanics/ability-cooldown/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_ability_cooldown"
+  },
+  {
+    "id": "loot-table",
+    "title": "Weighted loot selection",
+    "implementations": {
+      "python": "mechanics/loot-table/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_loot_table"
+  },
+  {
+    "id": "rollback-resimulation",
+    "title": "Deterministic rollback and resimulation",
+    "implementations": {
+      "python": "mechanics/rollback-resimulation/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_rollback_resimulation"
+  },
+  {
+    "id": "server-input-validation",
+    "title": "Authoritative movement command validation",
+    "implementations": {
+      "python": "mechanics/server-input-validation/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_server_input_validation"
+  },
+  {
+    "id": "animation-timeline",
+    "title": "Sprite animation timeline sampling",
+    "implementations": {
+      "python": "mechanics/animation-timeline/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_animation_timeline"
+  },
+  {
+    "id": "building-placement",
+    "title": "Rotated grid footprint placement",
+    "implementations": {
+      "python": "mechanics/building-placement/python/example.py"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_building_placement"
   }
 ]
