@@ -1,0 +1,153 @@
+[
+  {
+    "id": "fixed-timestep",
+    "title": "Simulation clock",
+    "implementations": {
+      "python": "mechanics/fixed-timestep/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "player-movement",
+    "title": "Player movement",
+    "implementations": {
+      "python": "mechanics/player-movement/python/example.py",
+      "c": "mechanics/player-movement/c/example.c",
+      "cpp": "mechanics/player-movement/cpp/example.cpp",
+      "javascript": "mechanics/player-movement/javascript/example.js",
+      "lua": "mechanics/player-movement/lua/example.lua",
+      "php": "mechanics/player-movement/php/example.php",
+      "rust": "mechanics/player-movement/rust/example.rs",
+      "csharp": "mechanics/player-movement/csharp/Program.cs"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "aabb-collision",
+    "title": "Axis-aligned rectangle collision",
+    "implementations": {
+      "python": "mechanics/aabb-collision/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "grid-pathfinding",
+    "title": "Grid pathfinding",
+    "implementations": {
+      "python": "mechanics/grid-pathfinding/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "raycasting",
+    "title": "Grid ray traversal",
+    "implementations": {
+      "python": "mechanics/raycasting/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "rigid-body-integration",
+    "title": "Gravity and integration",
+    "implementations": {
+      "python": "mechanics/rigid-body-integration/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "steering-arrival",
+    "title": "AI arrival steering",
+    "implementations": {
+      "python": "mechanics/steering-arrival/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "finite-state-machine",
+    "title": "Finite state machine",
+    "implementations": {
+      "python": "mechanics/finite-state-machine/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "inventory",
+    "title": "Inventory stacking",
+    "implementations": {
+      "python": "mechanics/inventory/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "ascii-world",
+    "title": "ASCII world rendering",
+    "implementations": {
+      "python": "mechanics/ascii-world/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "procedural-maze",
+    "title": "Procedural maze generation",
+    "implementations": {
+      "python": "mechanics/procedural-maze/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "camera-follow",
+    "title": "Camera smoothing",
+    "implementations": {
+      "python": "mechanics/camera-follow/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "spatial-hash",
+    "title": "Spatial hashing",
+    "implementations": {
+      "python": "mechanics/spatial-hash/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "racing-bicycle-model",
+    "title": "Kinematic vehicle steering",
+    "implementations": {
+      "python": "mechanics/racing-bicycle-model/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "snapshot-interpolation",
+    "title": "Multiplayer snapshot interpolation",
+    "implementations": {
+      "python": "mechanics/snapshot-interpolation/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "replay-window",
+    "title": "Multiplayer replay protection",
+    "implementations": {
+      "python": "mechanics/replay-window/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "level-editor-undo",
+    "title": "Level editor undo/redo",
+    "implementations": {
+      "python": "mechanics/level-editor-undo/python/example.py"
+    },
+    "status": "educational"
+  },
+  {
+    "id": "cad-extrusion",
+    "title": "CAD-style profile extrusion",
+    "implementations": {
+      "python": "mechanics/cad-extrusion/python/example.py"
+    },
+    "status": "educational"
+  }
+]

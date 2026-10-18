@@ -1,0 +1,113 @@
+{
+  "checked_date": "2026-10-19",
+  "scope": "HTTP reachability only; not content or licensing verification",
+  "results": [
+    {
+      "url": "https://gafferongames.com/post/fix_your_timestep/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.redblobgames.com/pathfinding/a-star/introduction.html",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://lodev.org/cgtutor/raycasting.html",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://gameprogrammingpatterns.com/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.reynoldssteering.com/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://box2d.org/documentation/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://docs.godotengine.org/en/stable/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://docs.blender.org/manual/en/latest/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://dev.opencascade.org/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://github.com/id-Software/DOOM",
+      "status": 200,
+      "final_url": "https://github.com/id-Software/DOOM"
+    },
+    {
+      "url": "https://github.com/id-Software/Quake",
+      "status": 200,
+      "final_url": "https://github.com/id-Software/Quake"
+    },
+    {
+      "url": "https://www.computerhistory.org/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.museumofplay.org/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.khronos.org/opengl/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.w3.org/TR/webgpu/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://github.com/lsalzman/enet",
+      "status": 200,
+      "final_url": "https://github.com/lsalzman/enet"
+    },
+    {
+      "url": "https://github.com/ValveSoftware/GameNetworkingSockets",
+      "status": 200,
+      "final_url": "https://github.com/ValveSoftware/GameNetworkingSockets"
+    },
+    {
+      "url": "https://github.com/heroiclabs/nakama",
+      "status": 200,
+      "final_url": "https://github.com/heroiclabs/nakama"
+    },
+    {
+      "url": "https://github.com/colyseus/colyseus",
+      "status": 200,
+      "final_url": "https://github.com/colyseus/colyseus"
+    },
+    {
+      "url": "https://github.com/boardgameio/boardgame.io",
+      "status": 200,
+      "final_url": "https://github.com/boardgameio/boardgame.io"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc8446",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc9000",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc8831",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/WebSocket_Security_Cheat_Sheet.html",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ]
+}
