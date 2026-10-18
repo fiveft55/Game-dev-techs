@@ -20,7 +20,7 @@
   },
   {
     "id": "player-movement",
-    "title": "Player movement",
+    "title": "Free movement (continuous)",
     "implementations": {
       "python": "mechanics/player-movement/python/example.py",
       "c": "mechanics/player-movement/c/mechanic.c",
@@ -985,7 +985,7 @@
   },
   {
     "id": "grid-movement",
-    "title": "Persistent grid-based movement",
+    "title": "Grid movement (tile-based)",
     "implementations": {
       "python": "mechanics/grid-movement/python/example.py",
       "c": "mechanics/grid-movement/c/mechanic.c",

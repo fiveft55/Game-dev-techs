@@ -2,6 +2,7 @@
 
 An evolving learning library for reusable game algorithms, game history, and development tools. Original examples are MIT licensed. This library contains 51 original Python mechanics mapped to all 22 documented genre families, plus 408 native core-kernel implementations across eight additional languages. It is not an exhaustive archive of all games, languages, or engines.
 
+- [Free movement: continuous positions and analog input](mechanics/player-movement/README.md)
 - [Grid-based movement: instant steps, smooth slides and buffered turns](mechanics/grid-movement/README.md)
 - [Beginner guide: code in plain English](docs/beginner-guide.md)
 - [Eight-language ports and calling examples](docs/language-ports.md)
@@ -13,6 +14,15 @@ An evolving learning library for reusable game algorithms, game history, and dev
 - [Multiplayer architecture and security](docs/multiplayer-security.md)
 - [Sources and licensing](docs/sources.md)
 - [Expansion roadmap](docs/roadmap.md)
+
+## Choose a movement mechanic
+
+These are separate implementations in separate folders, with independent input contracts and tests.
+
+| Mechanic | Folder | Behavior |
+|---|---|---|
+| [Free movement](mechanics/player-movement/README.md) | `mechanics/player-movement/` | Move any distance using speed and elapsed time; supports analog and diagonal input. |
+| [Grid movement](mechanics/grid-movement/README.md) | `mechanics/grid-movement/` | Step between adjacent tiles, check walls, and handle buffered turns and held-key repeat. |
 
 ## Start learning
 

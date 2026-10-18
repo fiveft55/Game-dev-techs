@@ -1,4 +1,8 @@
-# Player movement
+# Free movement (continuous)
+
+This independent mechanic is stored in `mechanics/player-movement/`. It moves by continuous distances, supports analog input and normalized diagonal movement, and leaves collision handling to your game.
+
+For one-tile steps with walls, buffered turns and key repeat, use the separate [grid-movement mechanic](../grid-movement/README.md). Each folder has its own code, input contract and tests.
 
 <!-- BEGIN PLAIN ENGLISH -->
 ## Plain-English explanation
@@ -54,3 +58,9 @@ See [validation evidence](../../docs/validation.md) for which toolchains actuall
 ## Portable language versions
 
 Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.
+
+## Run this mechanic independently
+
+```sh
+python3 tools/test_ports.py --mechanic player-movement --languages all
+```

@@ -1,4 +1,8 @@
-# Grid-based movement
+# Grid movement (tile-based)
+
+This independent mechanic is stored in `mechanics/grid-movement/`. Its tile destinations, wall checks, buffered turns and repeat timers belong to this folder.
+
+For continuous distances and analog or diagonal input, use the separate [free-movement mechanic](../player-movement/README.md). Each folder has its own code, input contract and tests.
 
 <!-- BEGIN PLAIN ENGLISH -->
 ## Plain-English explanation

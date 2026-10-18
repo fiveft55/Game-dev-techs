@@ -24,7 +24,7 @@ All inputs must follow their contract: finite numbers, exact integer counts/indi
 
 ## Calling conventions
 
-Use player movement as a first example. Input `[0, 0, 1, 0, 4, 0.5]` means position `(0,0)`, input `(1,0)`, speed `4`, and timestep `0.5` seconds. Every new port returns `[2,0]`.
+Use [free movement](../mechanics/player-movement/README.md), stored in `player-movement`, as a first example. The separate [grid controller](../mechanics/grid-movement/README.md) has its own tile-based input/state contract. Input `[0, 0, 1, 0, 4, 0.5]` means position `(0,0)`, input `(1,0)`, speed `4`, and timestep `0.5` seconds. Every new port returns `[2,0]`.
 
 ### JavaScript
 
