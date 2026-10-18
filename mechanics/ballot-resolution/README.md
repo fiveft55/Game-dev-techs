@@ -1,5 +1,18 @@
 # Social deduction secret ballot resolution
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Count a vote and choose one player to remove only when there is a clear winning choice.
+
+1. Accept at most one vote from each eligible voter.
+2. Count votes for eligible candidates; minus one means skip.
+3. Find the largest vote count.
+4. A tie, no votes, or a winning skip vote removes nobody.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Validate one ballot per eligible voter and resolve a unique plurality. None is an explicit skip ballot; missing voters abstain. A tie or a skip plurality yields no elimination.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 In-memory resolution only. Keep ballots on an authenticated authoritative server. No role assignment, player identity, reconnect handling, private transport, or anti-collusion claims.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

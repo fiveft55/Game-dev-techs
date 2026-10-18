@@ -1,5 +1,18 @@
 # Swept projectile versus rectangle
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Check whether a fast bullet passed through a box between two updates.
+
+1. Draw the entire line from the bullet old position to its new position.
+2. Find the part of that line that is inside the box left-to-right.
+3. Find the part that is inside the box bottom-to-top.
+4. If those parts overlap, return the first hit point as a fraction of the move. A fraction of 0.4 means 40 percent along.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 The slab intersection algorithm finds the first contact of a moving point with an axis-aligned rectangle over one update. The return value is a fraction of the segment, from zero to one; None means no collision. This avoids discrete point-sampling tunneling.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 2D finite inputs, point projectile, stationary rectangle, no penetration or response. Inflate a rectangle for a box projectile; a circle needs appropriate rounded geometry.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

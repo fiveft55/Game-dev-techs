@@ -19,17 +19,18 @@ def render():
 
     def mechanic_link(slug):
         entry = by_id[slug]
-        return f"[{entry['title']}](../mechanics/{slug}/README.md) ([code](../{entry['implementations']['python']}))"
+        return f"[{entry['title']}](../mechanics/{slug}/README.md) ([Python](../{entry['implementations']['python']}), [8-language ports](../mechanics/{slug}/PORTS.md))"
 
     table = [
         '# Genre-to-mechanics coverage',
         '',
         'All 22 families in the genre history have a representative set of implemented core algorithms below. '
-        'Every mechanic link includes a direct link to its Python source. Each module has its own explanation and behavioral test.',
+        'Every mechanic has links to its documentation, original Python source, and eight-language port contract. Each module has behavioral checks.',
         '',
         '**Coverage means reusable educational code exists, not that an entire genre, engine, or multiplayer game is complete.** '
         'The remaining column records concrete work outside this implementation set. '
-        'Only player movement also has C, C++, C#, Lua, JavaScript, PHP, and Rust ports; this table does not claim those languages for other entries.',
+        'All 50 entries additionally have native Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go kernels. '
+        'Their numeric-array contracts and any scope differences from Python are documented per mechanic in PORTS.md and in [language conventions](language-ports.md).',
         '',
         'Run `python3 tools/validate.py` from the repository root. See [validation evidence](validation.md). '
         'All included code is original and MIT licensed; no third-party game source was scraped.',
@@ -56,7 +57,7 @@ def render():
     ]
     index = [
         '# Mechanics index', '',
-        f'{len(catalog)} independent educational mechanics have Python implementations and behavioral checks. '
+        f'{len(catalog)} independent educational mechanics have original Python APIs and eight-language portable kernels with behavioral checks. '
         'See the [genre coverage table](genre-coverage.md) to choose a starting point by genre.', '',
         '| Mechanic | Available source code |', '|---|---|',
     ]

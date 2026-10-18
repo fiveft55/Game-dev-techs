@@ -1,5 +1,18 @@
 # Ordered checkpoints and lap counting
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Count a racing lap only after the driver visits every checkpoint in order.
+
+1. Start by expecting checkpoint zero.
+2. Ignore a checkpoint reached out of order.
+3. Do not count the same overlap again until the car leaves it.
+4. After the last checkpoint, add one lap and expect checkpoint zero again.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Accept checkpoints only in their configured order, count a lap after the entire sequence, and reject repeated overlap notifications until the vehicle exits the checkpoint.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 Call enter on overlap and exit on leaving a checkpoint. Geometry, wrong-way detection, continuous gate crossing, race position, and multiplayer validation are separate.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

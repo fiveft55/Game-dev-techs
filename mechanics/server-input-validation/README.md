@@ -1,5 +1,18 @@
 # Authoritative movement command validation
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Let the server move a player from allowed directions instead of trusting a claimed player position.
+
+1. Require a newer whole-number message sequence.
+2. Reject direction arrows longer than one.
+3. Use server-owned speed and update time to calculate movement.
+4. Ignore rejected commands. Network parsing, authentication, finite-number checks and one-command-per-tick limits belong at the server boundary.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 The server accepts normalized input directions and increasing integer sequence numbers, then advances position with a server-selected fixed timestep. Reject malformed, stale, infinite, and oversized input instead of accepting a client position or client elapsed time.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 No actual sockets, authentication, world collision, rate limiting, encryption, or persistence. Call once per server simulation tick; draining an arbitrary number of commands per tick would permit speed hacks.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

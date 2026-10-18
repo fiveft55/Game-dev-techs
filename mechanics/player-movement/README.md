@@ -1,5 +1,18 @@
 # Player movement
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Move a player in the direction they press, without making diagonal movement faster.
+
+1. Read where the player is and which direction they want to go.
+2. If the direction arrow is too long, shrink it to length one.
+3. Multiply that direction by speed and the time that passed.
+4. Add the result to the old position.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 Status: implemented educational reference; Python 3 standard library.
 
 Normalize diagonal input so diagonal travel is no faster than straight travel. Integrate velocity in units per second. Collision response and acceleration are separate mechanics.
@@ -37,3 +50,7 @@ dotnet run --project mechanics/player-movement/csharp/Movement.csproj
 ```
 
 See [validation evidence](../../docs/validation.md) for which toolchains actually ran.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

@@ -1,5 +1,18 @@
 # Experience levels and combat damage
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Turn experience points into a level and calculate a very simple damage amount.
+
+1. Store the experience amount needed to start each level.
+2. Count how many level marks the player has reached.
+3. Subtract armor from attack power to get damage.
+4. Never let damage fall below zero. You can replace this simple rule with your own balance formula.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Convert cumulative integer experience into a level using ordered cumulative thresholds. Combat damage subtracts nonnegative armor and clamps at zero. These are tunable rules rather than universal RPG formulas.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 No character classes, equipment modifiers, critical hits, status effects, or balance model. Thresholds specify level starts, beginning with level one at zero.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

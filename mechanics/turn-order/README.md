@@ -1,5 +1,18 @@
 # Deterministic initiative order
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Decide whose turn comes next and remove characters who leave the fight.
+
+1. Put faster characters first.
+2. If speeds tie, use the smaller character number first so the result is repeatable.
+3. Advance to the next character and wrap around at the end.
+4. When someone leaves, keep the right next character rather than accidentally skipping them.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Sort actors by descending initiative and ascending unique ID for ties. Advance cyclically, removing defeated actors while preserving who acts next.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 One fixed initiative order per encounter. Does not implement a whole rules engine, simultaneous orders, interrupts, or variable action costs.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

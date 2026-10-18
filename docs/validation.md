@@ -1,25 +1,38 @@
 # Validation evidence
 
-Checked 19 October 2026 (Australia/Sydney) in the onboarding workspace.
+Checked 19 October 2026 (Australia/Sydney) in the cloud workspace. [Machine-readable native results](native-validation.json) record the toolchains, fixture counts, outcomes and a digest of the 400 native source files plus 50 C headers.
+
+## Current edition
 
 | Check | Result |
 |---|---|
-| `python3 tools/validate.py` | 58 tests passed under Python 3.12.14: 50 individual mechanics, 4 composition tests, and 4 coverage/link checks |
-| `python3 tools/build_indexes.py --check` | Generated genre coverage and mechanics index match their JSON source data |
-| Genre coverage | All 22 documented genre families mapped exactly once; all 50 catalog entries mapped to a genre or cross-cutting tools |
-| C movement, C11, warnings treated as errors | Compiled and diagonal normalization assertion passed |
-| C++ movement, C++17, warnings treated as errors | Compiled and diagonal normalization assertion passed |
-| Node.js movement | Diagonal normalization assertion passed |
-| C#, Lua, PHP, Rust movement | Not executed: corresponding runtimes were not installed |
-| Source registry links | Seven GitHub links returned HTTP 200; 18 external documentation links were blocked by the network proxy with 403 |
-| Production engine, real network session, encryption handshake, CAD kernel | Not implemented or validated in this edition |
+| `python3 tools/validate.py` | **65 tests passed** under Python 3.12.14: 50 original mechanics, 4 composition checks, 4 coverage/link checks and 7 portable-specification checks |
+| `python3 tools/test_ports.py --languages all` | **148 fixtures passed in each of eight languages: 1,184 native fixture executions** across all 50 mechanics |
+| JavaScript | Node.js v24.19.0: passed |
+| TypeScript | 5.9.3 strict compilation, followed by execution in Node.js: passed |
+| C | GCC 14.2.0, C11, warnings as errors and undefined-behavior sanitizer: passed |
+| C integration | Public headers included together; all 50 separate translation units linked into one executable and invoked: passed |
+| Lua | System Lua 5.4 library executed through the ctypes test launcher: passed |
+| C# | .NET SDK 8.0.426 Roslyn compilation plus execution on .NET 8: passed |
+| GDScript | Godot 4.6.3 headless script loading and execution: passed |
+| Rust | Rust 1.90.0, edition 2021 compilation plus execution: passed |
+| Go | Go 1.25.1, all 50 packages tested with fresh test execution and no fetched dependencies: passed |
+| Generated source/contracts/fixtures | Checked against current generator/specifications: passed |
+| Genre coverage | All 22 families mapped exactly once; every catalog entry mapped and all source/documentation links exist |
+| Index freshness | Genre and mechanic indexes match catalog and coverage JSON |
 
-C, C++, Node.js and source-link outcomes above are retained evidence from the first edition; those unchanged ports and remote links were not rechecked for this expansion.
+The shared cases exercise successful actions, empty results, timing boundaries, duplicate events, invalid semantic requests, negative map coordinates, branching randomness, multi-flag dialogue, and other representative rules. Native fixtures are hand-authored; expected outputs are not produced by running the implementation being tested. C runs keep assertions enabled and use UBSan.
 
-The small language smoke checks cover diagonal normalization, not full equivalence or every invalid input. Python tests cover representative behavior, not exhaustive correctness, security, or performance. See `source-link-check.json` for individual HTTP outcomes. Network denials are not evidence that the linked sites are unavailable generally.
+Additional Python reference tests compare portable math, collisions, pathfinding, line of sight and mesh output with existing Python modules over many inputs. Maze checks verify connectivity and closed borders. Composition tests exercise fog/line of sight, cooldown/projectile/damage, crafting/save roundtripping and deterministic correction/replay.
 
-## Second-edition behavior checked
+These checks validate the **documented portable contracts**, not full equivalence with every Python public method. See [language conventions](language-ports.md) for differences: event batching, minimal decoded save migration, explicit numeric IDs, binary64 arithmetic and reduced service APIs. Kernels assume correctly shaped finite input; they are not general hostile-input parsers.
 
-The 32 added mechanics exercise successful actions and edge/rejection paths: consumed jump buffers, diagonal occlusion, projectile tunneling, duplicate attack hits, reward claims, dialogue flags, resource shortages, stale clocks, lap order, match intersections and gravity, rhythm misses, negative chunks, hidden entities, ties, empty decks, save versions, cooldown refill, exact loot-weight boundaries, rollback correction and malformed movement commands.
+## Platform notes
 
-Composition tests verify fog with line-of-sight walls, firing cooldown plus projectile contact and damage, crafting plus save roundtripping, and corrected deterministic input replay. The coverage tests verify taxonomy alignment, implementation/test presence, generated index freshness and local documentation links. No real network transport, encryption handshake, engine rendering, or performance benchmark was executed.
+The .NET CLI's first-run NuGet migration failed on a named mutex. The runner uses the installed Roslyn compiler and net8 reference assemblies directly, then executes the resulting DLL. This compiles and runs real C#; it does not skip C# validation. `/usr/bin/go` was another program, so tests use the checksum-verified local Go 1.25.1 installation. See [toolchain instructions](toolchains.md).
+
+No real network session, encryption handshake, engine rendering, production CAD kernel, concurrency load test or performance benchmark was run. Godot checks execute the pure GDScript kernels, not a playable scene. The original movement-only C++ smoke test remains prior-edition evidence; PHP and the earlier standalone movement snippets were not revalidated in this edition.
+
+## Earlier research evidence
+
+The first-edition source-link check recorded seven GitHub HTTP 200 responses and 18 documentation-site proxy denials. Those links were not re-fetched in this edition. See [source-link-check.json](source-link-check.json). A proxy denial does not establish that the site is unavailable generally, and an HTTP success does not establish substantive review or licensing suitability.

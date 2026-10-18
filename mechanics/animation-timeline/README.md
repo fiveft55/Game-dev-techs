@@ -1,5 +1,18 @@
 # Sprite animation timeline sampling
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Choose which picture of an animation should be shown at a given time.
+
+1. Give every picture a positive display duration.
+2. Add durations until reaching the requested time.
+3. Choose the picture covering that moment.
+4. Loop back to the beginning for repeating animation, or hold the last picture for a one-shot animation.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Use cumulative per-frame durations to sample the displayed frame at elapsed seconds. Support looping or a clamped one-shot animation. Sampling at an exact boundary selects the next frame.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 Pure timing, no texture loading, skeletal animation, blending, event dispatch, or audio synchronization. Durations and elapsed times must be finite.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

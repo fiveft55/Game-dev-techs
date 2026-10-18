@@ -1,5 +1,18 @@
 # Match-three detection and gravity
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Remove matching rows or columns of tiles, then let the remaining tiles fall down.
+
+1. Find long enough runs of identical nonempty tiles.
+2. Mark each matching tile once, even where a row and column cross.
+3. Remove all marked tiles together.
+4. Slide surviving tiles to the bottom of each column without changing their order.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Find horizontal and vertical runs of at least three identical nonempty tiles. Merge crossing matches, clear their cells, then collapse each column downward while preserving the order of surviving tiles.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 No random refill, swap validation, cascade loop, special tiles, or solvability generator. None represents an empty tile; tiles must support equality.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

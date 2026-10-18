@@ -1,7 +1,10 @@
 # Game development reference library
 
-An evolving learning library for reusable game algorithms, game history, and development tools. Original examples are MIT licensed. This library currently contains 50 independent Python mechanics mapped to all 22 documented genre families. It is not an exhaustive archive of all games, languages, or engines.
+An evolving learning library for reusable game algorithms, game history, and development tools. Original examples are MIT licensed. This library contains 50 original Python mechanics mapped to all 22 documented genre families, plus 400 native core-kernel implementations across eight additional languages. It is not an exhaustive archive of all games, languages, or engines.
 
+- [Beginner guide: code in plain English](docs/beginner-guide.md)
+- [Eight-language ports and calling examples](docs/language-ports.md)
+- [Toolchains and test commands](docs/toolchains.md)
 - [Genre-to-mechanics coverage table](docs/genre-coverage.md) and [machine-readable mapping](genre-coverage.json)
 - [Major genre families, 1980s–present](docs/genres.md)
 - [Evolution of development technology](docs/technology-history.md)
@@ -18,7 +21,9 @@ Each mechanic has its own folder, explanation, limitations, and commented source
 
 ## Choose a genre
 
-Open the coverage table, follow a mechanic's documentation or direct code link, and read its behavioral test for usage. Each genre row lists implemented algorithms separately from remaining integrations. All 50 mechanics have Python code; only movement currently has the seven additional language ports. C#, Lua, PHP, and Rust ports have not been executed in this workspace.
+Open the coverage table, follow a mechanic's documentation or direct code link, and read its behavioral test for usage. Each genre row lists implemented algorithms separately from remaining integrations. All 50 mechanics have Python code plus native Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go kernels. These share a documented numeric-array contract, with explicit scope differences from Python APIs. Earlier movement-only C++/PHP examples remain available. Every mechanic now has a plain-English walkthrough and a worked input/output example.
+
+Run all native fixtures with `python3 tools/test_ports.py --languages all`. To test one mechanic, add `--mechanic player-movement`. Missing compilers are reported as missing, not passed.
 
 Regenerate the indexes with `python3 tools/build_indexes.py`; verify them with `python3 tools/build_indexes.py --check`.
 

@@ -1,5 +1,18 @@
 # Score, lives, and extra lives
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Count points, award extra lives, and remove a life after a mistake.
+
+1. Add each points award to the total.
+2. Count how many extra-life marks the score crossed.
+3. Give one life for each mark crossed, even if one big award crosses several.
+4. A death removes one life, but lives never go below zero.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 An arcade score counter awards one life for each crossed score threshold. Store the awarded threshold count implicitly in the total score so that a single large award can grant multiple lives.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 Integer scoring only; no persistence, leaderboard service, anti-cheat, or game-specific life cap.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

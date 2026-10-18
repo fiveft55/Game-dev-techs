@@ -1,5 +1,18 @@
 # Conservative grid line of sight
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Tell whether a character can see another tile without a wall blocking the view.
+
+1. Walk a straight line from the starting tile center to the target tile center.
+2. Check every tile touched by the line.
+3. When the line crosses a corner, check both side tiles too.
+4. Any wall blocks sight. This prevents seeing through two walls that meet diagonally.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Walk every grid cell touched by a line between cell centers. When the line passes exactly through a corner, both adjacent side cells must be clear. This conservative convention prevents seeing diagonally through touching walls.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 2D integer tile coordinates, opaque/nonopaque cells. Does not model partial opacity, heights, lighting, or a perception cone.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

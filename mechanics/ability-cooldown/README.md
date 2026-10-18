@@ -1,5 +1,18 @@
 # Ability charges and cooldown refill
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Stop an ability from being used again until a charge has recovered.
+
+1. Each use spends one available charge.
+2. Remember the time when that charge will return.
+3. Before the next attempt, restore charges whose waiting time has ended.
+4. Allow the attempt only if at least one charge is available. Each charge waits independently.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Spend charges and restore each spent charge after a fixed duration. Each use starts its own recharge timer, so charges refill independently rather than serially. Use a monotonic simulation timestamp in seconds.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 No animations, mana costs, global cooldown, server RPC, or persistent clock. This is a parallel-charge policy; games with sequential recharge need different rules.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

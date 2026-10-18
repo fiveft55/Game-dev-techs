@@ -1,5 +1,18 @@
 # Deterministic rollback and resimulation
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Fix an old game state, then redo later moves so the present agrees with that correction.
+
+1. Keep the state before and after each numbered update.
+2. Replace the state at the corrected update with the trusted value.
+3. Apply every later recorded input again.
+4. Return the corrected history. Do not replay real-world side effects such as charging money.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Keep a snapshot before each simulation tick and the inputs used for it. When an authoritative correction arrives, restore the old state and replay later inputs. This example uses integer movement so the tiny simulation is exactly deterministic.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 Unbounded educational history, one-dimensional state, no input prediction, transport, animation effects, or production snapshot compression. Real games need bounded history and deterministic rules across peers; do not replay external side effects such as payments.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

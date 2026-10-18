@@ -1,5 +1,18 @@
 # Multiplayer replay protection
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Reject a repeated or very old network message while still allowing slightly late messages.
+
+1. Each message carries a counting number.
+2. Remember recently accepted numbers and the biggest number seen.
+3. Reject numbers already remembered or too far behind the biggest number.
+4. Only do this AFTER the network security layer proves the message is genuine. This code does not encrypt anything.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 Status: implemented educational reference; Python 3 standard library.
 
 Track a bounded window of authenticated sequence numbers to reject duplicates and stale packets while tolerating reordering. Sequence numbers must be nonnegative integers and must not wrap within a session. This is NOT encryption or authentication; update only after authenticating the packet.
@@ -15,3 +28,7 @@ Choose units and coordinate conventions. Validate external inputs at the applica
 ## Provenance
 
 Original educational implementation for this repository, distributed under the root MIT license. General algorithms are explained in the [source registry](../../docs/sources.md); no third-party source code or assets are bundled.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

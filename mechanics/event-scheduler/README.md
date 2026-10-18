@@ -1,5 +1,18 @@
 # Discrete-event simulation scheduler
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Do planned simulation jobs in time order.
+
+1. Give each job a time and a job number.
+2. Sort the jobs from early to late.
+3. Keep original order when two jobs share the same time.
+4. Return jobs due by the requested time. The portable kernel processes a batch rather than maintaining a live clock service.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 A priority queue orders simulation events by timestamp with stable insertion-order tie breaking. Advance to a target simulation time and return the due event payloads for the domain model to process.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 No threads, real-time waits, recurring jobs, or cancellation. For events that schedule earlier events inside the same interval, process one event at a time with a domain-specific loop.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

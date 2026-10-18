@@ -1,5 +1,18 @@
 # Rhythm timing windows
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Tell whether a music-game button press was close enough to a note time.
+
+1. Correct the recorded press time for measured input delay.
+2. Compare it with the planned note time.
+3. A very small gap means perfect; a larger allowed gap means good.
+4. Ignore presses too far away. A separate audio-clock rule must mark notes missed after their deadline.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Judge button timestamps against a scheduled note using absolute timing error in seconds. Subtract a measured input latency from the recorded timestamp. Advance missed notes with a separate expiry call.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 The caller supplies timestamps from the audio timeline, not accumulated rendering frame durations. No audio playback, calibration estimator, holds, chords, or lane allocation.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

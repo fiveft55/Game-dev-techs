@@ -3,439 +3,984 @@
     "id": "fixed-timestep",
     "title": "Simulation clock",
     "implementations": {
-      "python": "mechanics/fixed-timestep/python/example.py"
+      "python": "mechanics/fixed-timestep/python/example.py",
+      "c": "mechanics/fixed-timestep/c/mechanic.c",
+      "csharp": "mechanics/fixed-timestep/csharp/Mechanic.cs",
+      "lua": "mechanics/fixed-timestep/lua/mechanic.lua",
+      "gdscript": "mechanics/fixed-timestep/gdscript/mechanic.gd",
+      "typescript": "mechanics/fixed-timestep/typescript/mechanic.ts",
+      "javascript": "mechanics/fixed-timestep/javascript/mechanic.js",
+      "rust": "mechanics/fixed-timestep/rust/mechanic.rs",
+      "go": "mechanics/fixed-timestep/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/fixed-timestep/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#fixed-timestep",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "player-movement",
     "title": "Player movement",
     "implementations": {
       "python": "mechanics/player-movement/python/example.py",
-      "c": "mechanics/player-movement/c/example.c",
+      "c": "mechanics/player-movement/c/mechanic.c",
       "cpp": "mechanics/player-movement/cpp/example.cpp",
-      "javascript": "mechanics/player-movement/javascript/example.js",
-      "lua": "mechanics/player-movement/lua/example.lua",
+      "javascript": "mechanics/player-movement/javascript/mechanic.js",
+      "lua": "mechanics/player-movement/lua/mechanic.lua",
       "php": "mechanics/player-movement/php/example.php",
-      "rust": "mechanics/player-movement/rust/example.rs",
-      "csharp": "mechanics/player-movement/csharp/Program.cs"
+      "rust": "mechanics/player-movement/rust/mechanic.rs",
+      "csharp": "mechanics/player-movement/csharp/Mechanic.cs",
+      "gdscript": "mechanics/player-movement/gdscript/mechanic.gd",
+      "typescript": "mechanics/player-movement/typescript/mechanic.ts",
+      "go": "mechanics/player-movement/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/player-movement/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#player-movement",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "aabb-collision",
     "title": "Axis-aligned rectangle collision",
     "implementations": {
-      "python": "mechanics/aabb-collision/python/example.py"
+      "python": "mechanics/aabb-collision/python/example.py",
+      "c": "mechanics/aabb-collision/c/mechanic.c",
+      "csharp": "mechanics/aabb-collision/csharp/Mechanic.cs",
+      "lua": "mechanics/aabb-collision/lua/mechanic.lua",
+      "gdscript": "mechanics/aabb-collision/gdscript/mechanic.gd",
+      "typescript": "mechanics/aabb-collision/typescript/mechanic.ts",
+      "javascript": "mechanics/aabb-collision/javascript/mechanic.js",
+      "rust": "mechanics/aabb-collision/rust/mechanic.rs",
+      "go": "mechanics/aabb-collision/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/aabb-collision/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#aabb-collision",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "grid-pathfinding",
     "title": "Grid pathfinding",
     "implementations": {
-      "python": "mechanics/grid-pathfinding/python/example.py"
+      "python": "mechanics/grid-pathfinding/python/example.py",
+      "c": "mechanics/grid-pathfinding/c/mechanic.c",
+      "csharp": "mechanics/grid-pathfinding/csharp/Mechanic.cs",
+      "lua": "mechanics/grid-pathfinding/lua/mechanic.lua",
+      "gdscript": "mechanics/grid-pathfinding/gdscript/mechanic.gd",
+      "typescript": "mechanics/grid-pathfinding/typescript/mechanic.ts",
+      "javascript": "mechanics/grid-pathfinding/javascript/mechanic.js",
+      "rust": "mechanics/grid-pathfinding/rust/mechanic.rs",
+      "go": "mechanics/grid-pathfinding/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/grid-pathfinding/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#grid-pathfinding",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "raycasting",
     "title": "Grid ray traversal",
     "implementations": {
-      "python": "mechanics/raycasting/python/example.py"
+      "python": "mechanics/raycasting/python/example.py",
+      "c": "mechanics/raycasting/c/mechanic.c",
+      "csharp": "mechanics/raycasting/csharp/Mechanic.cs",
+      "lua": "mechanics/raycasting/lua/mechanic.lua",
+      "gdscript": "mechanics/raycasting/gdscript/mechanic.gd",
+      "typescript": "mechanics/raycasting/typescript/mechanic.ts",
+      "javascript": "mechanics/raycasting/javascript/mechanic.js",
+      "rust": "mechanics/raycasting/rust/mechanic.rs",
+      "go": "mechanics/raycasting/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/raycasting/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#raycasting",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "rigid-body-integration",
     "title": "Gravity and integration",
     "implementations": {
-      "python": "mechanics/rigid-body-integration/python/example.py"
+      "python": "mechanics/rigid-body-integration/python/example.py",
+      "c": "mechanics/rigid-body-integration/c/mechanic.c",
+      "csharp": "mechanics/rigid-body-integration/csharp/Mechanic.cs",
+      "lua": "mechanics/rigid-body-integration/lua/mechanic.lua",
+      "gdscript": "mechanics/rigid-body-integration/gdscript/mechanic.gd",
+      "typescript": "mechanics/rigid-body-integration/typescript/mechanic.ts",
+      "javascript": "mechanics/rigid-body-integration/javascript/mechanic.js",
+      "rust": "mechanics/rigid-body-integration/rust/mechanic.rs",
+      "go": "mechanics/rigid-body-integration/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/rigid-body-integration/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#rigid-body-integration",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "steering-arrival",
     "title": "AI arrival steering",
     "implementations": {
-      "python": "mechanics/steering-arrival/python/example.py"
+      "python": "mechanics/steering-arrival/python/example.py",
+      "c": "mechanics/steering-arrival/c/mechanic.c",
+      "csharp": "mechanics/steering-arrival/csharp/Mechanic.cs",
+      "lua": "mechanics/steering-arrival/lua/mechanic.lua",
+      "gdscript": "mechanics/steering-arrival/gdscript/mechanic.gd",
+      "typescript": "mechanics/steering-arrival/typescript/mechanic.ts",
+      "javascript": "mechanics/steering-arrival/javascript/mechanic.js",
+      "rust": "mechanics/steering-arrival/rust/mechanic.rs",
+      "go": "mechanics/steering-arrival/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/steering-arrival/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#steering-arrival",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "finite-state-machine",
     "title": "Finite state machine",
     "implementations": {
-      "python": "mechanics/finite-state-machine/python/example.py"
+      "python": "mechanics/finite-state-machine/python/example.py",
+      "c": "mechanics/finite-state-machine/c/mechanic.c",
+      "csharp": "mechanics/finite-state-machine/csharp/Mechanic.cs",
+      "lua": "mechanics/finite-state-machine/lua/mechanic.lua",
+      "gdscript": "mechanics/finite-state-machine/gdscript/mechanic.gd",
+      "typescript": "mechanics/finite-state-machine/typescript/mechanic.ts",
+      "javascript": "mechanics/finite-state-machine/javascript/mechanic.js",
+      "rust": "mechanics/finite-state-machine/rust/mechanic.rs",
+      "go": "mechanics/finite-state-machine/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/finite-state-machine/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#finite-state-machine",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "inventory",
     "title": "Inventory stacking",
     "implementations": {
-      "python": "mechanics/inventory/python/example.py"
+      "python": "mechanics/inventory/python/example.py",
+      "c": "mechanics/inventory/c/mechanic.c",
+      "csharp": "mechanics/inventory/csharp/Mechanic.cs",
+      "lua": "mechanics/inventory/lua/mechanic.lua",
+      "gdscript": "mechanics/inventory/gdscript/mechanic.gd",
+      "typescript": "mechanics/inventory/typescript/mechanic.ts",
+      "javascript": "mechanics/inventory/javascript/mechanic.js",
+      "rust": "mechanics/inventory/rust/mechanic.rs",
+      "go": "mechanics/inventory/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/inventory/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#inventory",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "ascii-world",
     "title": "ASCII world rendering",
     "implementations": {
-      "python": "mechanics/ascii-world/python/example.py"
+      "python": "mechanics/ascii-world/python/example.py",
+      "c": "mechanics/ascii-world/c/mechanic.c",
+      "csharp": "mechanics/ascii-world/csharp/Mechanic.cs",
+      "lua": "mechanics/ascii-world/lua/mechanic.lua",
+      "gdscript": "mechanics/ascii-world/gdscript/mechanic.gd",
+      "typescript": "mechanics/ascii-world/typescript/mechanic.ts",
+      "javascript": "mechanics/ascii-world/javascript/mechanic.js",
+      "rust": "mechanics/ascii-world/rust/mechanic.rs",
+      "go": "mechanics/ascii-world/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/ascii-world/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#ascii-world",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "procedural-maze",
     "title": "Procedural maze generation",
     "implementations": {
-      "python": "mechanics/procedural-maze/python/example.py"
+      "python": "mechanics/procedural-maze/python/example.py",
+      "c": "mechanics/procedural-maze/c/mechanic.c",
+      "csharp": "mechanics/procedural-maze/csharp/Mechanic.cs",
+      "lua": "mechanics/procedural-maze/lua/mechanic.lua",
+      "gdscript": "mechanics/procedural-maze/gdscript/mechanic.gd",
+      "typescript": "mechanics/procedural-maze/typescript/mechanic.ts",
+      "javascript": "mechanics/procedural-maze/javascript/mechanic.js",
+      "rust": "mechanics/procedural-maze/rust/mechanic.rs",
+      "go": "mechanics/procedural-maze/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/procedural-maze/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#procedural-maze",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "camera-follow",
     "title": "Camera smoothing",
     "implementations": {
-      "python": "mechanics/camera-follow/python/example.py"
+      "python": "mechanics/camera-follow/python/example.py",
+      "c": "mechanics/camera-follow/c/mechanic.c",
+      "csharp": "mechanics/camera-follow/csharp/Mechanic.cs",
+      "lua": "mechanics/camera-follow/lua/mechanic.lua",
+      "gdscript": "mechanics/camera-follow/gdscript/mechanic.gd",
+      "typescript": "mechanics/camera-follow/typescript/mechanic.ts",
+      "javascript": "mechanics/camera-follow/javascript/mechanic.js",
+      "rust": "mechanics/camera-follow/rust/mechanic.rs",
+      "go": "mechanics/camera-follow/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/camera-follow/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#camera-follow",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "spatial-hash",
     "title": "Spatial hashing",
     "implementations": {
-      "python": "mechanics/spatial-hash/python/example.py"
+      "python": "mechanics/spatial-hash/python/example.py",
+      "c": "mechanics/spatial-hash/c/mechanic.c",
+      "csharp": "mechanics/spatial-hash/csharp/Mechanic.cs",
+      "lua": "mechanics/spatial-hash/lua/mechanic.lua",
+      "gdscript": "mechanics/spatial-hash/gdscript/mechanic.gd",
+      "typescript": "mechanics/spatial-hash/typescript/mechanic.ts",
+      "javascript": "mechanics/spatial-hash/javascript/mechanic.js",
+      "rust": "mechanics/spatial-hash/rust/mechanic.rs",
+      "go": "mechanics/spatial-hash/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/spatial-hash/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#spatial-hash",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "racing-bicycle-model",
     "title": "Kinematic vehicle steering",
     "implementations": {
-      "python": "mechanics/racing-bicycle-model/python/example.py"
+      "python": "mechanics/racing-bicycle-model/python/example.py",
+      "c": "mechanics/racing-bicycle-model/c/mechanic.c",
+      "csharp": "mechanics/racing-bicycle-model/csharp/Mechanic.cs",
+      "lua": "mechanics/racing-bicycle-model/lua/mechanic.lua",
+      "gdscript": "mechanics/racing-bicycle-model/gdscript/mechanic.gd",
+      "typescript": "mechanics/racing-bicycle-model/typescript/mechanic.ts",
+      "javascript": "mechanics/racing-bicycle-model/javascript/mechanic.js",
+      "rust": "mechanics/racing-bicycle-model/rust/mechanic.rs",
+      "go": "mechanics/racing-bicycle-model/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/racing-bicycle-model/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#racing-bicycle-model",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "snapshot-interpolation",
     "title": "Multiplayer snapshot interpolation",
     "implementations": {
-      "python": "mechanics/snapshot-interpolation/python/example.py"
+      "python": "mechanics/snapshot-interpolation/python/example.py",
+      "c": "mechanics/snapshot-interpolation/c/mechanic.c",
+      "csharp": "mechanics/snapshot-interpolation/csharp/Mechanic.cs",
+      "lua": "mechanics/snapshot-interpolation/lua/mechanic.lua",
+      "gdscript": "mechanics/snapshot-interpolation/gdscript/mechanic.gd",
+      "typescript": "mechanics/snapshot-interpolation/typescript/mechanic.ts",
+      "javascript": "mechanics/snapshot-interpolation/javascript/mechanic.js",
+      "rust": "mechanics/snapshot-interpolation/rust/mechanic.rs",
+      "go": "mechanics/snapshot-interpolation/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/snapshot-interpolation/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#snapshot-interpolation",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "replay-window",
     "title": "Multiplayer replay protection",
     "implementations": {
-      "python": "mechanics/replay-window/python/example.py"
+      "python": "mechanics/replay-window/python/example.py",
+      "c": "mechanics/replay-window/c/mechanic.c",
+      "csharp": "mechanics/replay-window/csharp/Mechanic.cs",
+      "lua": "mechanics/replay-window/lua/mechanic.lua",
+      "gdscript": "mechanics/replay-window/gdscript/mechanic.gd",
+      "typescript": "mechanics/replay-window/typescript/mechanic.ts",
+      "javascript": "mechanics/replay-window/javascript/mechanic.js",
+      "rust": "mechanics/replay-window/rust/mechanic.rs",
+      "go": "mechanics/replay-window/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/replay-window/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#replay-window",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "level-editor-undo",
     "title": "Level editor undo/redo",
     "implementations": {
-      "python": "mechanics/level-editor-undo/python/example.py"
+      "python": "mechanics/level-editor-undo/python/example.py",
+      "c": "mechanics/level-editor-undo/c/mechanic.c",
+      "csharp": "mechanics/level-editor-undo/csharp/Mechanic.cs",
+      "lua": "mechanics/level-editor-undo/lua/mechanic.lua",
+      "gdscript": "mechanics/level-editor-undo/gdscript/mechanic.gd",
+      "typescript": "mechanics/level-editor-undo/typescript/mechanic.ts",
+      "javascript": "mechanics/level-editor-undo/javascript/mechanic.js",
+      "rust": "mechanics/level-editor-undo/rust/mechanic.rs",
+      "go": "mechanics/level-editor-undo/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/level-editor-undo/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#level-editor-undo",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "cad-extrusion",
     "title": "CAD-style profile extrusion",
     "implementations": {
-      "python": "mechanics/cad-extrusion/python/example.py"
+      "python": "mechanics/cad-extrusion/python/example.py",
+      "c": "mechanics/cad-extrusion/c/mechanic.c",
+      "csharp": "mechanics/cad-extrusion/csharp/Mechanic.cs",
+      "lua": "mechanics/cad-extrusion/lua/mechanic.lua",
+      "gdscript": "mechanics/cad-extrusion/gdscript/mechanic.gd",
+      "typescript": "mechanics/cad-extrusion/typescript/mechanic.ts",
+      "javascript": "mechanics/cad-extrusion/javascript/mechanic.js",
+      "rust": "mechanics/cad-extrusion/rust/mechanic.rs",
+      "go": "mechanics/cad-extrusion/go/mechanic.go"
     },
-    "status": "educational"
+    "status": "educational",
+    "portable_contract": "mechanics/cad-extrusion/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#cad-extrusion",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "score-lives",
     "title": "Score, lives, and extra lives",
     "implementations": {
-      "python": "mechanics/score-lives/python/example.py"
+      "python": "mechanics/score-lives/python/example.py",
+      "c": "mechanics/score-lives/c/mechanic.c",
+      "csharp": "mechanics/score-lives/csharp/Mechanic.cs",
+      "lua": "mechanics/score-lives/lua/mechanic.lua",
+      "gdscript": "mechanics/score-lives/gdscript/mechanic.gd",
+      "typescript": "mechanics/score-lives/typescript/mechanic.ts",
+      "javascript": "mechanics/score-lives/javascript/mechanic.js",
+      "rust": "mechanics/score-lives/rust/mechanic.rs",
+      "go": "mechanics/score-lives/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_score_lives"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_score_lives",
+    "portable_contract": "mechanics/score-lives/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#score-lives",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "jump-controller",
     "title": "Buffered jump and coyote time",
     "implementations": {
-      "python": "mechanics/jump-controller/python/example.py"
+      "python": "mechanics/jump-controller/python/example.py",
+      "c": "mechanics/jump-controller/c/mechanic.c",
+      "csharp": "mechanics/jump-controller/csharp/Mechanic.cs",
+      "lua": "mechanics/jump-controller/lua/mechanic.lua",
+      "gdscript": "mechanics/jump-controller/gdscript/mechanic.gd",
+      "typescript": "mechanics/jump-controller/typescript/mechanic.ts",
+      "javascript": "mechanics/jump-controller/javascript/mechanic.js",
+      "rust": "mechanics/jump-controller/rust/mechanic.rs",
+      "go": "mechanics/jump-controller/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_jump_controller"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_jump_controller",
+    "portable_contract": "mechanics/jump-controller/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#jump-controller",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "projectile-sweep",
     "title": "Swept projectile versus rectangle",
     "implementations": {
-      "python": "mechanics/projectile-sweep/python/example.py"
+      "python": "mechanics/projectile-sweep/python/example.py",
+      "c": "mechanics/projectile-sweep/c/mechanic.c",
+      "csharp": "mechanics/projectile-sweep/csharp/Mechanic.cs",
+      "lua": "mechanics/projectile-sweep/lua/mechanic.lua",
+      "gdscript": "mechanics/projectile-sweep/gdscript/mechanic.gd",
+      "typescript": "mechanics/projectile-sweep/typescript/mechanic.ts",
+      "javascript": "mechanics/projectile-sweep/javascript/mechanic.js",
+      "rust": "mechanics/projectile-sweep/rust/mechanic.rs",
+      "go": "mechanics/projectile-sweep/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_projectile_sweep"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_projectile_sweep",
+    "portable_contract": "mechanics/projectile-sweep/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#projectile-sweep",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "combat-frames",
     "title": "Attack startup, active, and recovery frames",
     "implementations": {
-      "python": "mechanics/combat-frames/python/example.py"
+      "python": "mechanics/combat-frames/python/example.py",
+      "c": "mechanics/combat-frames/c/mechanic.c",
+      "csharp": "mechanics/combat-frames/csharp/Mechanic.cs",
+      "lua": "mechanics/combat-frames/lua/mechanic.lua",
+      "gdscript": "mechanics/combat-frames/gdscript/mechanic.gd",
+      "typescript": "mechanics/combat-frames/typescript/mechanic.ts",
+      "javascript": "mechanics/combat-frames/javascript/mechanic.js",
+      "rust": "mechanics/combat-frames/rust/mechanic.rs",
+      "go": "mechanics/combat-frames/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_combat_frames"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_combat_frames",
+    "portable_contract": "mechanics/combat-frames/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#combat-frames",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "line-of-sight",
     "title": "Conservative grid line of sight",
     "implementations": {
-      "python": "mechanics/line-of-sight/python/example.py"
+      "python": "mechanics/line-of-sight/python/example.py",
+      "c": "mechanics/line-of-sight/c/mechanic.c",
+      "csharp": "mechanics/line-of-sight/csharp/Mechanic.cs",
+      "lua": "mechanics/line-of-sight/lua/mechanic.lua",
+      "gdscript": "mechanics/line-of-sight/gdscript/mechanic.gd",
+      "typescript": "mechanics/line-of-sight/typescript/mechanic.ts",
+      "javascript": "mechanics/line-of-sight/javascript/mechanic.js",
+      "rust": "mechanics/line-of-sight/rust/mechanic.rs",
+      "go": "mechanics/line-of-sight/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_line_of_sight"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_line_of_sight",
+    "portable_contract": "mechanics/line-of-sight/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#line-of-sight",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "rpg-progression",
     "title": "Experience levels and combat damage",
     "implementations": {
-      "python": "mechanics/rpg-progression/python/example.py"
+      "python": "mechanics/rpg-progression/python/example.py",
+      "c": "mechanics/rpg-progression/c/mechanic.c",
+      "csharp": "mechanics/rpg-progression/csharp/Mechanic.cs",
+      "lua": "mechanics/rpg-progression/lua/mechanic.lua",
+      "gdscript": "mechanics/rpg-progression/gdscript/mechanic.gd",
+      "typescript": "mechanics/rpg-progression/typescript/mechanic.ts",
+      "javascript": "mechanics/rpg-progression/javascript/mechanic.js",
+      "rust": "mechanics/rpg-progression/rust/mechanic.rs",
+      "go": "mechanics/rpg-progression/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_rpg_progression"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_rpg_progression",
+    "portable_contract": "mechanics/rpg-progression/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#rpg-progression",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "quest-objectives",
     "title": "Quest objective tracking",
     "implementations": {
-      "python": "mechanics/quest-objectives/python/example.py"
+      "python": "mechanics/quest-objectives/python/example.py",
+      "c": "mechanics/quest-objectives/c/mechanic.c",
+      "csharp": "mechanics/quest-objectives/csharp/Mechanic.cs",
+      "lua": "mechanics/quest-objectives/lua/mechanic.lua",
+      "gdscript": "mechanics/quest-objectives/gdscript/mechanic.gd",
+      "typescript": "mechanics/quest-objectives/typescript/mechanic.ts",
+      "javascript": "mechanics/quest-objectives/javascript/mechanic.js",
+      "rust": "mechanics/quest-objectives/rust/mechanic.rs",
+      "go": "mechanics/quest-objectives/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_quest_objectives"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_quest_objectives",
+    "portable_contract": "mechanics/quest-objectives/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#quest-objectives",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "dialogue-graph",
     "title": "Conditional branching dialogue",
     "implementations": {
-      "python": "mechanics/dialogue-graph/python/example.py"
+      "python": "mechanics/dialogue-graph/python/example.py",
+      "c": "mechanics/dialogue-graph/c/mechanic.c",
+      "csharp": "mechanics/dialogue-graph/csharp/Mechanic.cs",
+      "lua": "mechanics/dialogue-graph/lua/mechanic.lua",
+      "gdscript": "mechanics/dialogue-graph/gdscript/mechanic.gd",
+      "typescript": "mechanics/dialogue-graph/typescript/mechanic.ts",
+      "javascript": "mechanics/dialogue-graph/javascript/mechanic.js",
+      "rust": "mechanics/dialogue-graph/rust/mechanic.rs",
+      "go": "mechanics/dialogue-graph/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_dialogue_graph"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_dialogue_graph",
+    "portable_contract": "mechanics/dialogue-graph/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#dialogue-graph",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "turn-order",
     "title": "Deterministic initiative order",
     "implementations": {
-      "python": "mechanics/turn-order/python/example.py"
+      "python": "mechanics/turn-order/python/example.py",
+      "c": "mechanics/turn-order/c/mechanic.c",
+      "csharp": "mechanics/turn-order/csharp/Mechanic.cs",
+      "lua": "mechanics/turn-order/lua/mechanic.lua",
+      "gdscript": "mechanics/turn-order/gdscript/mechanic.gd",
+      "typescript": "mechanics/turn-order/typescript/mechanic.ts",
+      "javascript": "mechanics/turn-order/javascript/mechanic.js",
+      "rust": "mechanics/turn-order/rust/mechanic.rs",
+      "go": "mechanics/turn-order/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_turn_order"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_turn_order",
+    "portable_contract": "mechanics/turn-order/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#turn-order",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "resource-economy",
     "title": "Atomic resource purchase",
     "implementations": {
-      "python": "mechanics/resource-economy/python/example.py"
+      "python": "mechanics/resource-economy/python/example.py",
+      "c": "mechanics/resource-economy/c/mechanic.c",
+      "csharp": "mechanics/resource-economy/csharp/Mechanic.cs",
+      "lua": "mechanics/resource-economy/lua/mechanic.lua",
+      "gdscript": "mechanics/resource-economy/gdscript/mechanic.gd",
+      "typescript": "mechanics/resource-economy/typescript/mechanic.ts",
+      "javascript": "mechanics/resource-economy/javascript/mechanic.js",
+      "rust": "mechanics/resource-economy/rust/mechanic.rs",
+      "go": "mechanics/resource-economy/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_resource_economy"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_resource_economy",
+    "portable_contract": "mechanics/resource-economy/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#resource-economy",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "fog-of-war",
     "title": "Visible and explored fog of war",
     "implementations": {
-      "python": "mechanics/fog-of-war/python/example.py"
+      "python": "mechanics/fog-of-war/python/example.py",
+      "c": "mechanics/fog-of-war/c/mechanic.c",
+      "csharp": "mechanics/fog-of-war/csharp/Mechanic.cs",
+      "lua": "mechanics/fog-of-war/lua/mechanic.lua",
+      "gdscript": "mechanics/fog-of-war/gdscript/mechanic.gd",
+      "typescript": "mechanics/fog-of-war/typescript/mechanic.ts",
+      "javascript": "mechanics/fog-of-war/javascript/mechanic.js",
+      "rust": "mechanics/fog-of-war/rust/mechanic.rs",
+      "go": "mechanics/fog-of-war/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_fog_of_war"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_fog_of_war",
+    "portable_contract": "mechanics/fog-of-war/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#fog-of-war",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "wave-spawner",
     "title": "Timed enemy wave spawning",
     "implementations": {
-      "python": "mechanics/wave-spawner/python/example.py"
+      "python": "mechanics/wave-spawner/python/example.py",
+      "c": "mechanics/wave-spawner/c/mechanic.c",
+      "csharp": "mechanics/wave-spawner/csharp/Mechanic.cs",
+      "lua": "mechanics/wave-spawner/lua/mechanic.lua",
+      "gdscript": "mechanics/wave-spawner/gdscript/mechanic.gd",
+      "typescript": "mechanics/wave-spawner/typescript/mechanic.ts",
+      "javascript": "mechanics/wave-spawner/javascript/mechanic.js",
+      "rust": "mechanics/wave-spawner/rust/mechanic.rs",
+      "go": "mechanics/wave-spawner/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_wave_spawner"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_wave_spawner",
+    "portable_contract": "mechanics/wave-spawner/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#wave-spawner",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "event-scheduler",
     "title": "Discrete-event simulation scheduler",
     "implementations": {
-      "python": "mechanics/event-scheduler/python/example.py"
+      "python": "mechanics/event-scheduler/python/example.py",
+      "c": "mechanics/event-scheduler/c/mechanic.c",
+      "csharp": "mechanics/event-scheduler/csharp/Mechanic.cs",
+      "lua": "mechanics/event-scheduler/lua/mechanic.lua",
+      "gdscript": "mechanics/event-scheduler/gdscript/mechanic.gd",
+      "typescript": "mechanics/event-scheduler/typescript/mechanic.ts",
+      "javascript": "mechanics/event-scheduler/javascript/mechanic.js",
+      "rust": "mechanics/event-scheduler/rust/mechanic.rs",
+      "go": "mechanics/event-scheduler/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_event_scheduler"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_event_scheduler",
+    "portable_contract": "mechanics/event-scheduler/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#event-scheduler",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "racing-checkpoints",
     "title": "Ordered checkpoints and lap counting",
     "implementations": {
-      "python": "mechanics/racing-checkpoints/python/example.py"
+      "python": "mechanics/racing-checkpoints/python/example.py",
+      "c": "mechanics/racing-checkpoints/c/mechanic.c",
+      "csharp": "mechanics/racing-checkpoints/csharp/Mechanic.cs",
+      "lua": "mechanics/racing-checkpoints/lua/mechanic.lua",
+      "gdscript": "mechanics/racing-checkpoints/gdscript/mechanic.gd",
+      "typescript": "mechanics/racing-checkpoints/typescript/mechanic.ts",
+      "javascript": "mechanics/racing-checkpoints/javascript/mechanic.js",
+      "rust": "mechanics/racing-checkpoints/rust/mechanic.rs",
+      "go": "mechanics/racing-checkpoints/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_racing_checkpoints"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_racing_checkpoints",
+    "portable_contract": "mechanics/racing-checkpoints/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#racing-checkpoints",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "ball-reflection",
     "title": "Ball bounce against a surface",
     "implementations": {
-      "python": "mechanics/ball-reflection/python/example.py"
+      "python": "mechanics/ball-reflection/python/example.py",
+      "c": "mechanics/ball-reflection/c/mechanic.c",
+      "csharp": "mechanics/ball-reflection/csharp/Mechanic.cs",
+      "lua": "mechanics/ball-reflection/lua/mechanic.lua",
+      "gdscript": "mechanics/ball-reflection/gdscript/mechanic.gd",
+      "typescript": "mechanics/ball-reflection/typescript/mechanic.ts",
+      "javascript": "mechanics/ball-reflection/javascript/mechanic.js",
+      "rust": "mechanics/ball-reflection/rust/mechanic.rs",
+      "go": "mechanics/ball-reflection/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_ball_reflection"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_ball_reflection",
+    "portable_contract": "mechanics/ball-reflection/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#ball-reflection",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "match-grid",
     "title": "Match-three detection and gravity",
     "implementations": {
-      "python": "mechanics/match-grid/python/example.py"
+      "python": "mechanics/match-grid/python/example.py",
+      "c": "mechanics/match-grid/c/mechanic.c",
+      "csharp": "mechanics/match-grid/csharp/Mechanic.cs",
+      "lua": "mechanics/match-grid/lua/mechanic.lua",
+      "gdscript": "mechanics/match-grid/gdscript/mechanic.gd",
+      "typescript": "mechanics/match-grid/typescript/mechanic.ts",
+      "javascript": "mechanics/match-grid/javascript/mechanic.js",
+      "rust": "mechanics/match-grid/rust/mechanic.rs",
+      "go": "mechanics/match-grid/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_match_grid"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_match_grid",
+    "portable_contract": "mechanics/match-grid/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#match-grid",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "rhythm-judgement",
     "title": "Rhythm timing windows",
     "implementations": {
-      "python": "mechanics/rhythm-judgement/python/example.py"
+      "python": "mechanics/rhythm-judgement/python/example.py",
+      "c": "mechanics/rhythm-judgement/c/mechanic.c",
+      "csharp": "mechanics/rhythm-judgement/csharp/Mechanic.cs",
+      "lua": "mechanics/rhythm-judgement/lua/mechanic.lua",
+      "gdscript": "mechanics/rhythm-judgement/gdscript/mechanic.gd",
+      "typescript": "mechanics/rhythm-judgement/typescript/mechanic.ts",
+      "javascript": "mechanics/rhythm-judgement/javascript/mechanic.js",
+      "rust": "mechanics/rhythm-judgement/rust/mechanic.rs",
+      "go": "mechanics/rhythm-judgement/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_rhythm_judgement"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_rhythm_judgement",
+    "portable_contract": "mechanics/rhythm-judgement/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#rhythm-judgement",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "crafting-recipes",
     "title": "Batch crafting recipes",
     "implementations": {
-      "python": "mechanics/crafting-recipes/python/example.py"
+      "python": "mechanics/crafting-recipes/python/example.py",
+      "c": "mechanics/crafting-recipes/c/mechanic.c",
+      "csharp": "mechanics/crafting-recipes/csharp/Mechanic.cs",
+      "lua": "mechanics/crafting-recipes/lua/mechanic.lua",
+      "gdscript": "mechanics/crafting-recipes/gdscript/mechanic.gd",
+      "typescript": "mechanics/crafting-recipes/typescript/mechanic.ts",
+      "javascript": "mechanics/crafting-recipes/javascript/mechanic.js",
+      "rust": "mechanics/crafting-recipes/rust/mechanic.rs",
+      "go": "mechanics/crafting-recipes/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_crafting_recipes"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_crafting_recipes",
+    "portable_contract": "mechanics/crafting-recipes/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#crafting-recipes",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "chunk-coordinates",
     "title": "World-to-chunk coordinates",
     "implementations": {
-      "python": "mechanics/chunk-coordinates/python/example.py"
+      "python": "mechanics/chunk-coordinates/python/example.py",
+      "c": "mechanics/chunk-coordinates/c/mechanic.c",
+      "csharp": "mechanics/chunk-coordinates/csharp/Mechanic.cs",
+      "lua": "mechanics/chunk-coordinates/lua/mechanic.lua",
+      "gdscript": "mechanics/chunk-coordinates/gdscript/mechanic.gd",
+      "typescript": "mechanics/chunk-coordinates/typescript/mechanic.ts",
+      "javascript": "mechanics/chunk-coordinates/javascript/mechanic.js",
+      "rust": "mechanics/chunk-coordinates/rust/mechanic.rs",
+      "go": "mechanics/chunk-coordinates/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_chunk_coordinates"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_chunk_coordinates",
+    "portable_contract": "mechanics/chunk-coordinates/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#chunk-coordinates",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "interest-management",
     "title": "Server-side spatial interest filtering",
     "implementations": {
-      "python": "mechanics/interest-management/python/example.py"
+      "python": "mechanics/interest-management/python/example.py",
+      "c": "mechanics/interest-management/c/mechanic.c",
+      "csharp": "mechanics/interest-management/csharp/Mechanic.cs",
+      "lua": "mechanics/interest-management/lua/mechanic.lua",
+      "gdscript": "mechanics/interest-management/gdscript/mechanic.gd",
+      "typescript": "mechanics/interest-management/typescript/mechanic.ts",
+      "javascript": "mechanics/interest-management/javascript/mechanic.js",
+      "rust": "mechanics/interest-management/rust/mechanic.rs",
+      "go": "mechanics/interest-management/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_interest_management"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_interest_management",
+    "portable_contract": "mechanics/interest-management/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#interest-management",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "shrinking-zone",
     "title": "Battle royale shrinking safe zone",
     "implementations": {
-      "python": "mechanics/shrinking-zone/python/example.py"
+      "python": "mechanics/shrinking-zone/python/example.py",
+      "c": "mechanics/shrinking-zone/c/mechanic.c",
+      "csharp": "mechanics/shrinking-zone/csharp/Mechanic.cs",
+      "lua": "mechanics/shrinking-zone/lua/mechanic.lua",
+      "gdscript": "mechanics/shrinking-zone/gdscript/mechanic.gd",
+      "typescript": "mechanics/shrinking-zone/typescript/mechanic.ts",
+      "javascript": "mechanics/shrinking-zone/javascript/mechanic.js",
+      "rust": "mechanics/shrinking-zone/rust/mechanic.rs",
+      "go": "mechanics/shrinking-zone/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_shrinking_zone"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_shrinking_zone",
+    "portable_contract": "mechanics/shrinking-zone/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#shrinking-zone",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "ballot-resolution",
     "title": "Social deduction secret ballot resolution",
     "implementations": {
-      "python": "mechanics/ballot-resolution/python/example.py"
+      "python": "mechanics/ballot-resolution/python/example.py",
+      "c": "mechanics/ballot-resolution/c/mechanic.c",
+      "csharp": "mechanics/ballot-resolution/csharp/Mechanic.cs",
+      "lua": "mechanics/ballot-resolution/lua/mechanic.lua",
+      "gdscript": "mechanics/ballot-resolution/gdscript/mechanic.gd",
+      "typescript": "mechanics/ballot-resolution/typescript/mechanic.ts",
+      "javascript": "mechanics/ballot-resolution/javascript/mechanic.js",
+      "rust": "mechanics/ballot-resolution/rust/mechanic.rs",
+      "go": "mechanics/ballot-resolution/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_ballot_resolution"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_ballot_resolution",
+    "portable_contract": "mechanics/ballot-resolution/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#ballot-resolution",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "deck-draw",
     "title": "Seeded deck shuffle, draw, and discard",
     "implementations": {
-      "python": "mechanics/deck-draw/python/example.py"
+      "python": "mechanics/deck-draw/python/example.py",
+      "c": "mechanics/deck-draw/c/mechanic.c",
+      "csharp": "mechanics/deck-draw/csharp/Mechanic.cs",
+      "lua": "mechanics/deck-draw/lua/mechanic.lua",
+      "gdscript": "mechanics/deck-draw/gdscript/mechanic.gd",
+      "typescript": "mechanics/deck-draw/typescript/mechanic.ts",
+      "javascript": "mechanics/deck-draw/javascript/mechanic.js",
+      "rust": "mechanics/deck-draw/rust/mechanic.rs",
+      "go": "mechanics/deck-draw/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_deck_draw"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_deck_draw",
+    "portable_contract": "mechanics/deck-draw/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#deck-draw",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "spaced-repetition",
     "title": "Learning review scheduling",
     "implementations": {
-      "python": "mechanics/spaced-repetition/python/example.py"
+      "python": "mechanics/spaced-repetition/python/example.py",
+      "c": "mechanics/spaced-repetition/c/mechanic.c",
+      "csharp": "mechanics/spaced-repetition/csharp/Mechanic.cs",
+      "lua": "mechanics/spaced-repetition/lua/mechanic.lua",
+      "gdscript": "mechanics/spaced-repetition/gdscript/mechanic.gd",
+      "typescript": "mechanics/spaced-repetition/typescript/mechanic.ts",
+      "javascript": "mechanics/spaced-repetition/javascript/mechanic.js",
+      "rust": "mechanics/spaced-repetition/rust/mechanic.rs",
+      "go": "mechanics/spaced-repetition/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_spaced_repetition"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_spaced_repetition",
+    "portable_contract": "mechanics/spaced-repetition/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#spaced-repetition",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "offline-progress",
     "title": "Capped idle-game offline production",
     "implementations": {
-      "python": "mechanics/offline-progress/python/example.py"
+      "python": "mechanics/offline-progress/python/example.py",
+      "c": "mechanics/offline-progress/c/mechanic.c",
+      "csharp": "mechanics/offline-progress/csharp/Mechanic.cs",
+      "lua": "mechanics/offline-progress/lua/mechanic.lua",
+      "gdscript": "mechanics/offline-progress/gdscript/mechanic.gd",
+      "typescript": "mechanics/offline-progress/typescript/mechanic.ts",
+      "javascript": "mechanics/offline-progress/javascript/mechanic.js",
+      "rust": "mechanics/offline-progress/rust/mechanic.rs",
+      "go": "mechanics/offline-progress/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_offline_progress"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_offline_progress",
+    "portable_contract": "mechanics/offline-progress/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#offline-progress",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "save-migration",
     "title": "Versioned JSON save migration",
     "implementations": {
-      "python": "mechanics/save-migration/python/example.py"
+      "python": "mechanics/save-migration/python/example.py",
+      "c": "mechanics/save-migration/c/mechanic.c",
+      "csharp": "mechanics/save-migration/csharp/Mechanic.cs",
+      "lua": "mechanics/save-migration/lua/mechanic.lua",
+      "gdscript": "mechanics/save-migration/gdscript/mechanic.gd",
+      "typescript": "mechanics/save-migration/typescript/mechanic.ts",
+      "javascript": "mechanics/save-migration/javascript/mechanic.js",
+      "rust": "mechanics/save-migration/rust/mechanic.rs",
+      "go": "mechanics/save-migration/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_save_migration"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_save_migration",
+    "portable_contract": "mechanics/save-migration/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#save-migration",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "ability-cooldown",
     "title": "Ability charges and cooldown refill",
     "implementations": {
-      "python": "mechanics/ability-cooldown/python/example.py"
+      "python": "mechanics/ability-cooldown/python/example.py",
+      "c": "mechanics/ability-cooldown/c/mechanic.c",
+      "csharp": "mechanics/ability-cooldown/csharp/Mechanic.cs",
+      "lua": "mechanics/ability-cooldown/lua/mechanic.lua",
+      "gdscript": "mechanics/ability-cooldown/gdscript/mechanic.gd",
+      "typescript": "mechanics/ability-cooldown/typescript/mechanic.ts",
+      "javascript": "mechanics/ability-cooldown/javascript/mechanic.js",
+      "rust": "mechanics/ability-cooldown/rust/mechanic.rs",
+      "go": "mechanics/ability-cooldown/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_ability_cooldown"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_ability_cooldown",
+    "portable_contract": "mechanics/ability-cooldown/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#ability-cooldown",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "loot-table",
     "title": "Weighted loot selection",
     "implementations": {
-      "python": "mechanics/loot-table/python/example.py"
+      "python": "mechanics/loot-table/python/example.py",
+      "c": "mechanics/loot-table/c/mechanic.c",
+      "csharp": "mechanics/loot-table/csharp/Mechanic.cs",
+      "lua": "mechanics/loot-table/lua/mechanic.lua",
+      "gdscript": "mechanics/loot-table/gdscript/mechanic.gd",
+      "typescript": "mechanics/loot-table/typescript/mechanic.ts",
+      "javascript": "mechanics/loot-table/javascript/mechanic.js",
+      "rust": "mechanics/loot-table/rust/mechanic.rs",
+      "go": "mechanics/loot-table/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_loot_table"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_loot_table",
+    "portable_contract": "mechanics/loot-table/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#loot-table",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "rollback-resimulation",
     "title": "Deterministic rollback and resimulation",
     "implementations": {
-      "python": "mechanics/rollback-resimulation/python/example.py"
+      "python": "mechanics/rollback-resimulation/python/example.py",
+      "c": "mechanics/rollback-resimulation/c/mechanic.c",
+      "csharp": "mechanics/rollback-resimulation/csharp/Mechanic.cs",
+      "lua": "mechanics/rollback-resimulation/lua/mechanic.lua",
+      "gdscript": "mechanics/rollback-resimulation/gdscript/mechanic.gd",
+      "typescript": "mechanics/rollback-resimulation/typescript/mechanic.ts",
+      "javascript": "mechanics/rollback-resimulation/javascript/mechanic.js",
+      "rust": "mechanics/rollback-resimulation/rust/mechanic.rs",
+      "go": "mechanics/rollback-resimulation/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_rollback_resimulation"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_rollback_resimulation",
+    "portable_contract": "mechanics/rollback-resimulation/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#rollback-resimulation",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "server-input-validation",
     "title": "Authoritative movement command validation",
     "implementations": {
-      "python": "mechanics/server-input-validation/python/example.py"
+      "python": "mechanics/server-input-validation/python/example.py",
+      "c": "mechanics/server-input-validation/c/mechanic.c",
+      "csharp": "mechanics/server-input-validation/csharp/Mechanic.cs",
+      "lua": "mechanics/server-input-validation/lua/mechanic.lua",
+      "gdscript": "mechanics/server-input-validation/gdscript/mechanic.gd",
+      "typescript": "mechanics/server-input-validation/typescript/mechanic.ts",
+      "javascript": "mechanics/server-input-validation/javascript/mechanic.js",
+      "rust": "mechanics/server-input-validation/rust/mechanic.rs",
+      "go": "mechanics/server-input-validation/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_server_input_validation"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_server_input_validation",
+    "portable_contract": "mechanics/server-input-validation/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#server-input-validation",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "animation-timeline",
     "title": "Sprite animation timeline sampling",
     "implementations": {
-      "python": "mechanics/animation-timeline/python/example.py"
+      "python": "mechanics/animation-timeline/python/example.py",
+      "c": "mechanics/animation-timeline/c/mechanic.c",
+      "csharp": "mechanics/animation-timeline/csharp/Mechanic.cs",
+      "lua": "mechanics/animation-timeline/lua/mechanic.lua",
+      "gdscript": "mechanics/animation-timeline/gdscript/mechanic.gd",
+      "typescript": "mechanics/animation-timeline/typescript/mechanic.ts",
+      "javascript": "mechanics/animation-timeline/javascript/mechanic.js",
+      "rust": "mechanics/animation-timeline/rust/mechanic.rs",
+      "go": "mechanics/animation-timeline/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_animation_timeline"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_animation_timeline",
+    "portable_contract": "mechanics/animation-timeline/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#animation-timeline",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   },
   {
     "id": "building-placement",
     "title": "Rotated grid footprint placement",
     "implementations": {
-      "python": "mechanics/building-placement/python/example.py"
+      "python": "mechanics/building-placement/python/example.py",
+      "c": "mechanics/building-placement/c/mechanic.c",
+      "csharp": "mechanics/building-placement/csharp/Mechanic.cs",
+      "lua": "mechanics/building-placement/lua/mechanic.lua",
+      "gdscript": "mechanics/building-placement/gdscript/mechanic.gd",
+      "typescript": "mechanics/building-placement/typescript/mechanic.ts",
+      "javascript": "mechanics/building-placement/javascript/mechanic.js",
+      "rust": "mechanics/building-placement/rust/mechanic.rs",
+      "go": "mechanics/building-placement/go/mechanic.go"
     },
     "status": "educational",
-    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_building_placement"
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_building_placement",
+    "portable_contract": "mechanics/building-placement/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#building-placement",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   }
 ]

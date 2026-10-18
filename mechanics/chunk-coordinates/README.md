@@ -1,5 +1,18 @@
 # World-to-chunk coordinates
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Find which big map piece owns a world tile, and where that tile sits inside the piece.
+
+1. Divide the world coordinate by the piece size and round downward.
+2. That gives the chunk, or big piece, number.
+3. Subtract the chunk start to get the local tile number.
+4. Rounding downward matters: world tile -1 is in chunk -1, at the last local tile.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Split integer world coordinates into chunk coordinates and nonnegative local coordinates. Floor division is essential for negative positions: tile -1 belongs to chunk -1, local size-1.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 2D coordinate mapping only, no chunk streaming, mesh generation, file I/O, or floating-origin management.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

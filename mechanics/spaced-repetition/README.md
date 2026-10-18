@@ -1,5 +1,18 @@
 # Learning review scheduling
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Choose when a learning question should be asked again.
+
+1. Read the previous waiting period and whether the answer was correct.
+2. A correct answer doubles the wait, starting at one day.
+3. An incorrect answer resets the wait to one day.
+4. Add that wait to the current time to get the next review time. This is a simple teaching example, not a proven learning model.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 A simple educational-game scheduler doubles a successful review interval, starting at one day, and resets it after a failed answer. Return interval and next due time in seconds.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 This is a transparent toy scheduling policy, not SM-2, FSRS, a validated learning intervention, or a diagnostic/assessment model. Track a trusted review clock and protect learner data.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

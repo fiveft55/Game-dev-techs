@@ -1,5 +1,18 @@
 # Timed enemy wave spawning
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Release enemies at planned times without accidentally releasing them twice.
+
+1. Keep a time-ordered list of enemies to create.
+2. On each update, compare the game clock with the next enemy time.
+3. Release every enemy whose time has arrived, including several after a slow frame.
+4. Move the list cursor forward so released enemies are not repeated.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 A sorted schedule emits every due spawn, including multiple overdue events after a long frame. Stable sorting preserves input order for simultaneous events. Times are seconds from the start of the wave.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 Returns data only: callers create entities. No object pooling, enemy behavior, difficulty director, or wave-completion rules.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.

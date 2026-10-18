@@ -1,5 +1,18 @@
 # Visible and explored fog of war
 
+<!-- BEGIN PLAIN ENGLISH -->
+## Plain-English explanation
+
+Hide unexplored parts of a map while remembering places the player has already seen.
+
+1. Find tiles close enough to each observer.
+2. Mark those tiles visible right now.
+3. Keep old explored marks even when the observer moves away.
+4. The portable version checks distance only; add wall blocking separately.
+
+See [PORTS.md](PORTS.md) for actual inputs, outputs and a worked example. The [beginner guide](../../docs/beginner-guide.md) explains common coding words.
+<!-- END PLAIN ENGLISH -->
+
 ## Mechanic and algorithm
 
 Accumulate explored cells while replacing the currently visible set each update. Use a supplied line-of-sight predicate to hide cells behind walls; the default is radius-only visibility.
@@ -31,8 +44,12 @@ spec.loader.exec_module(mechanic)
 
 This is visibility bookkeeping, not a wall occlusion algorithm or secure server replication. Use line-of-sight for obstacles, and interest management on the server to avoid leaking hidden state.
 
-Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. This entry currently has Python code; other language ports are not present.
+Tune the rules for your game and extend the tests before integrating. Educational coverage is not a full genre implementation or a production-readiness guarantee. The original Python API is preserved. Eight additional native kernels are available; see the portable contract for their API and scope differences.
 
 ## Provenance
 
 Original code written for this repository under the root [MIT license](../../LICENSE). No third-party source or assets were scraped or bundled. See [genre coverage](../../docs/genre-coverage.md) for reuse across genres and the [source policy](../../docs/sources.md) before importing additional code.
+
+## Portable language versions
+
+Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.
