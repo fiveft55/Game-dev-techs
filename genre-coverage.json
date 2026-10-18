@@ -5,6 +5,7 @@
     {
       "genre": "Arcade action",
       "implemented": [
+        "grid-movement",
         "player-movement",
         "aabb-collision",
         "score-lives",
@@ -52,6 +53,7 @@
     {
       "genre": "Action adventure",
       "implemented": [
+        "grid-movement",
         "line-of-sight",
         "grid-pathfinding",
         "inventory",
@@ -63,6 +65,7 @@
     {
       "genre": "Role-playing",
       "implemented": [
+        "grid-movement",
         "rpg-progression",
         "quest-objectives",
         "inventory",
@@ -75,6 +78,7 @@
     {
       "genre": "Roguelike / roguelite",
       "implemented": [
+        "grid-movement",
         "procedural-maze",
         "turn-order",
         "loot-table",
@@ -86,6 +90,7 @@
     {
       "genre": "Adventure / narrative",
       "implemented": [
+        "grid-movement",
         "dialogue-graph",
         "quest-objectives",
         "inventory",
@@ -96,6 +101,7 @@
     {
       "genre": "Strategy",
       "implemented": [
+        "grid-movement",
         "grid-pathfinding",
         "turn-order",
         "resource-economy",
@@ -151,6 +157,7 @@
     {
       "genre": "Puzzle",
       "implemented": [
+        "grid-movement",
         "match-grid",
         "grid-pathfinding",
         "level-editor-undo",

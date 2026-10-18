@@ -29,7 +29,7 @@ def render():
         '',
         '**Coverage means reusable educational code exists, not that an entire genre, engine, or multiplayer game is complete.** '
         'The remaining column records concrete work outside this implementation set. '
-        'All 50 entries additionally have native Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go kernels. '
+        f'All {len(catalog)} entries additionally have native Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go kernels. '
         'Their numeric-array contracts and any scope differences from Python are documented per mechanic in PORTS.md and in [language conventions](language-ports.md).',
         '',
         'Run `python3 tools/validate.py` from the repository root. See [validation evidence](validation.md). '

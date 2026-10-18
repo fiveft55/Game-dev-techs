@@ -982,5 +982,25 @@
     "portable_contract": "mechanics/building-placement/PORTS.md",
     "portable_fixtures": "tests/port-fixtures.json#building-placement",
     "portable_api": "numeric-kernel; see contract for differences from original Python API"
+  },
+  {
+    "id": "grid-movement",
+    "title": "Persistent grid-based movement",
+    "implementations": {
+      "python": "mechanics/grid-movement/python/example.py",
+      "c": "mechanics/grid-movement/c/mechanic.c",
+      "csharp": "mechanics/grid-movement/csharp/Mechanic.cs",
+      "lua": "mechanics/grid-movement/lua/mechanic.lua",
+      "gdscript": "mechanics/grid-movement/gdscript/mechanic.gd",
+      "typescript": "mechanics/grid-movement/typescript/mechanic.ts",
+      "javascript": "mechanics/grid-movement/javascript/mechanic.js",
+      "rust": "mechanics/grid-movement/rust/mechanic.rs",
+      "go": "mechanics/grid-movement/go/mechanic.go"
+    },
+    "status": "educational",
+    "test": "tests/test_genre_mechanics.py::GenreMechanicsTests::test_grid_movement",
+    "portable_contract": "mechanics/grid-movement/PORTS.md",
+    "portable_fixtures": "tests/port-fixtures.json#grid-movement",
+    "portable_api": "numeric-kernel; see contract for differences from original Python API"
   }
 ]

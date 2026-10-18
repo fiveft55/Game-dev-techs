@@ -313,5 +313,14 @@ class GenreMechanicsTests(unittest.TestCase):
         self.assertEqual(occupied,{(0,0)})
         with self.assertRaises(ValueError): m.place(occupied,[],(0,0),4,4)
 
+    def test_grid_movement(self):
+        m = load('grid-movement')
+        player = m.GridMover([[0,0,1]], step_seconds=0)
+        self.assertFalse(player.update(0,'right')['blocked'])
+        self.assertEqual(player.tile,(1,0))
+        player.update(0,None)
+        self.assertTrue(player.update(0,'right')['blocked'])
+        self.assertEqual(player.tile,(1,0))
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

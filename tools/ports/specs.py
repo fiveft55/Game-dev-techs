@@ -1282,3 +1282,140 @@ SPECS['deck-draw']['cases'].extend([
     ([0,3,1,2,3,-1,-1,-1],[2,1,3]),
 ])
 SPECS['dialogue-graph']['cases'].append(([0,0,2,0,1,0,0,5,0,2,1,5,2,2,1,2],[1,7,2]))
+
+define('grid-movement',
+       '[width,height,step_seconds,repeat_delay,repeat_interval,buffer_seconds,dt,direction,...9_state_values,...row_major_grid]',
+       '[...9_next_state_values,visual_x,visual_y,steps_started,tiles_arrived,blocked_flag]',
+       'Persistent one-update controller. Directions 0=release,1=up,2=right,3=down,4=left (Y down). State: tile_x,tile_y,target_x,target_y,progress,buffered_direction,held_direction,repeat_remaining,buffer_remaining. Keep the first nine outputs for the next call. Zero tiles are walkable. dt is 0..1 seconds; repeat delay/interval >=0.01 seconds. See README for event ordering and static-map assumptions; [-1] means invalid configuration/state.', '''
+if length(data)<18:
+    return [-1]
+w=get(data,0)
+h=get(data,1)
+step_seconds=get(data,2)
+repeat_delay=get(data,3)
+repeat_interval=get(data,4)
+buffer_seconds=get(data,5)
+remaining=get(data,6)
+direction=get(data,7)
+tile_x=get(data,8)
+tile_y=get(data,9)
+target_x=get(data,10)
+target_y=get(data,11)
+progress=get(data,12)
+buffered=get(data,13)
+held=get(data,14)
+repeat_remaining=get(data,15)
+buffer_remaining=get(data,16)
+if w<1 or h<1 or floor_num(w)!=w or floor_num(h)!=h or length(data)!=17+w*h:
+    return [-1]
+if step_seconds<0 or repeat_delay<0.01 or repeat_interval<0.01 or buffer_seconds<0 or remaining<0 or remaining>1:
+    return [-1]
+if direction<0 or direction>4 or floor_num(direction)!=direction or held<0 or held>4 or floor_num(held)!=held or buffered<0 or buffered>4 or floor_num(buffered)!=buffered:
+    return [-1]
+if tile_x<0 or tile_x>=w or tile_y<0 or tile_y>=h or target_x<0 or target_x>=w or target_y<0 or target_y>=h:
+    return [-1]
+if floor_num(tile_x)!=tile_x or floor_num(tile_y)!=tile_y or floor_num(target_x)!=target_x or floor_num(target_y)!=target_y:
+    return [-1]
+if progress<0 or progress>1 or repeat_remaining<0 or buffer_remaining<0 or abs_num(target_x-tile_x)+abs_num(target_y-tile_y)>1:
+    return [-1]
+if (target_x==tile_x and target_y==tile_y and progress!=0) or get(data,17+tile_y*w+tile_x)!=0 or get(data,17+target_y*w+target_x)!=0:
+    return [-1]
+# Instant mode cannot resume a previously unfinished smooth step.
+if step_seconds==0 and (target_x!=tile_x or target_y!=tile_y):
+    return [-1]
+# A changed direction is a fresh press; a release stops repeating but keeps a live buffer.
+if direction!=held:
+    held=direction
+    repeat_remaining=0
+    if direction!=0:
+        repeat_remaining=repeat_delay
+        buffered=direction
+        buffer_remaining=buffer_seconds
+started=0
+arrived=0
+blocked=0
+# Process exact event boundaries so a long update does not skip repeats or overshoot tiles.
+while 1==1:
+    if (target_x!=tile_x or target_y!=tile_y) and progress>=1-0.000000001:
+        tile_x=target_x
+        tile_y=target_y
+        progress=0
+        arrived+=1
+    if held!=0 and repeat_remaining<=0.000000001:
+        buffered=held
+        buffer_remaining=buffer_seconds
+        repeat_remaining+=repeat_interval
+    if tile_x==target_x and tile_y==target_y and buffered!=0:
+        nx=tile_x
+        ny=tile_y
+        if buffered==1:
+            ny-=1
+        if buffered==2:
+            nx+=1
+        if buffered==3:
+            ny+=1
+        if buffered==4:
+            nx-=1
+        # Consume each request once, including a blocked request.
+        buffered=0
+        buffer_remaining=0
+        passable=0
+        if nx>=0 and nx<w and ny>=0 and ny<h:
+            if get(data,17+ny*w+nx)==0:
+                passable=1
+        if passable==0:
+            blocked=1
+        else:
+            target_x=nx
+            target_y=ny
+            started+=1
+            if step_seconds==0:
+                tile_x=target_x
+                tile_y=target_y
+                arrived+=1
+    if remaining<=0.000000001:
+        break
+    advance=remaining
+    if held!=0:
+        advance=minimum(advance,repeat_remaining)
+    if tile_x!=target_x or tile_y!=target_y:
+        advance=minimum(advance,(1-progress)*step_seconds)
+        progress+=advance/step_seconds
+    remaining=maximum(0,remaining-advance)
+    if held!=0:
+        repeat_remaining=maximum(0,repeat_remaining-advance)
+    if buffered!=0:
+        buffer_remaining-=advance
+        # A buffer remains valid at its exact deadline, but expires strictly after it.
+        if buffer_remaining < -0.000000001:
+            buffered=0
+            buffer_remaining=0
+        else:
+            buffer_remaining=maximum(0,buffer_remaining)
+visual_x=tile_x+(target_x-tile_x)*progress
+visual_y=tile_y+(target_y-tile_y)*progress
+return [tile_x,tile_y,target_x,target_y,progress,buffered,held,repeat_remaining,buffer_remaining,visual_x,visual_y,started,arrived,blocked]
+''', [
+    # Fresh instant step, fresh smooth half-step, boundary, wall, and held repeat.
+    ([3,1,0,.3,.1,.15,0,2,0,0,0,0,0,0,0,0,0,0,0,0], [1,0,1,0,0,0,2,.3,0,1,0,1,1,0]),
+    ([3,1,.2,.3,.1,.15,.1,2,0,0,0,0,0,0,0,0,0,0,0,0], [0,0,1,0,.5,0,2,.2,0,.5,0,1,0,0]),
+    ([3,1,0,.3,.1,.15,0,1,0,0,0,0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,1,.3,0,0,0,0,0,1]),
+    ([2,1,0,.3,.1,.15,0,2,0,0,0,0,0,0,0,0,0,0,1], [0,0,0,0,0,0,2,.3,0,0,0,0,0,1]),
+    ([6,1,0,.3,.1,.15,.5,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], [4,0,4,0,0,0,2,.1,0,4,0,4,4,0]),
+    # Change direction in transit: wait for arrival, then take the buffered turn.
+    ([2,2,.2,.3,.1,.15,.1,3,0,0,1,0,.5,0,2,.2,0,0,0,0,0], [1,0,1,1,0,0,3,.2,0,1,0,1,1,0]),
+    # An early turn expires; a release stops repeat but preserves an unexpired turn.
+    ([2,2,.2,.3,.1,.05,.1,3,0,0,1,0,.5,0,2,.2,0,0,0,0,0], [1,0,1,0,0,0,3,.2,0,1,0,0,1,0]),
+    ([2,2,.2,.3,.1,.2,.1,0,0,0,1,0,.5,3,2,.3,.2,0,0,0,0], [1,0,1,1,0,0,0,0,0,1,0,1,1,0]),
+    # Exact buffer deadline is valid. Invalid direction and excessive dt are rejected.
+    ([2,2,.2,.3,.1,.1,.1,3,0,0,1,0,.5,0,2,.2,0,0,0,0,0], [1,0,1,1,0,0,3,.2,0,1,0,1,1,0]),
+    ([1,1,.2,.3,.1,.15,0,5,0,0,0,0,0,0,0,0,0,0], [-1]),
+    ([1,1,.2,.3,.1,.15,2,0,0,0,0,0,0,0,0,0,0,0], [-1]),
+])
+
+SPECS['grid-movement']['cases'].extend([
+    ([3,3,0,.3,.1,.15,0,1,1,1,1,1,0,0,0,0,0,*([0]*9)], [1,0,1,0,0,0,1,.3,0,1,0,1,1,0]),
+    ([3,3,0,.3,.1,.15,0,4,1,1,1,1,0,0,0,0,0,*([0]*9)], [0,1,0,1,0,0,4,.3,0,0,1,1,1,0]),
+    ([2,1,0,.3,.1,.15,0,0,0,0,1,0,.5,0,0,0,0,0,0], [-1]),
+    ([1,1,.2,.3,.1,.15,0,0,0,0,0,0,0,0,0,0,0,1], [-1]),
+])

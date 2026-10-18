@@ -1,6 +1,6 @@
 # Native language ports
 
-All 50 mechanics now have original Python implementations plus eight independent native kernels: **Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go**. That is 400 new native implementation files, with C headers alongside them. The earlier movement-only C++, PHP and standalone examples are retained.
+All 51 mechanics now have original Python implementations plus eight independent native kernels: **Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go**. That is 408 native implementation files, with C headers alongside them. The earlier movement-only C++, PHP and standalone examples are retained.
 
 Start at the [mechanics index](mechanics-index.md), choose a mechanic, and open its `PORTS.md`. That file lists the exact input/output layout and a worked fixture. The original Python API has not changed.
 
@@ -10,6 +10,7 @@ The eight new languages share a small explicit numeric-array API. Algorithms run
 
 These are **portable core kernels, not full API replicas of the Python modules**. Important differences are explicit:
 
+- The grid-movement controller is persistent through explicit state: carry its first nine output values into the next call. It includes key-repeat and buffer timers. Python also provides a named `GridMover` object.
 - Some Python classes are represented by batched events starting a fresh session per call. Do not assume history persists between calls; keep events/state in a wrapper or adapt the kernel into an engine object.
 - The save kernel migrates a decoded minimal `(version, gold)` record. It does not implement the Python JSON parser or arbitrary inventory schema.
 - Quest ports accumulate objectives and expose a final claim decision, not a persistent atomic reward service. Rhythm ports judge presses; the caller performs audio-clock expiry/miss handling.
@@ -86,7 +87,7 @@ int main(void) {
 }
 ```
 
-From the repository root, compile your caller together with `mechanics/player-movement/c/mechanic.c`, add `-I.` and link `-lm`. Use each module's header and a separate translation unit; do not paste multiple `.c` files into one translation unit. Every exported algorithm name is unique, and the validation runner links all 50 together.
+From the repository root, compile your caller together with `mechanics/player-movement/c/mechanic.c`, add `-I.` and link `-lm`. Use each module's header and a separate translation unit; do not paste multiple `.c` files into one translation unit. Every exported algorithm name is unique, and the validation runner links all 51 together.
 
 `PortVector` owns a fixed buffer, default 4096 doubles. Overflow or invalid indexing asserts. Do not disable assertions while relying on those checks. The same `PORT_CAPACITY` must be defined for every linked source and caller to preserve ABI compatibility. By-value buffers and linear scans prioritize transparent ownership over production performance.
 

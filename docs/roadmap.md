@@ -2,13 +2,15 @@
 
 ## Delivered
 
-50 independent original Python mechanics with behavioral checks, mapped to all 22 genre families in [the coverage table](genre-coverage.md). Every mechanic additionally has native Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go kernels with documented numeric interfaces and fixtures. Movement-only C++ and PHP examples are retained. See [language conventions](language-ports.md) for explicit differences from Python class/serialization APIs. Genre and technology histories, security/legal guidance, and machine-readable indexes are included. See [validation evidence](validation.md).
+51 independent original Python mechanics with behavioral checks, mapped to all 22 genre families in [the coverage table](genre-coverage.md). Every mechanic additionally has native Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go kernels with documented numeric interfaces and fixtures. Movement-only C++ and PHP examples are retained. See [language conventions](language-ports.md) for explicit differences from Python class/serialization APIs. Genre and technology histories, security/legal guidance, and machine-readable indexes are included. See [validation evidence](validation.md).
 
 The second edition adds 32 implementations, including platform jump timing, swept projectiles, attack frames, line of sight, RPG progression, quests, dialogue, initiative, resource purchases, fog, waves, simulation events, racing checkpoints, ball bounce, match-three collapse, rhythm timing, crafting, chunks, interest filtering, safe zones, ballots, decks, learning reviews, offline production, save migration, cooldowns, weighted loot, rollback replay, server input checks, sprite timing, and grid construction.
 
+The grid-movement addition provides a persistent four-way tile controller with instant/smooth steps, wall checks, input buffering, held-key repeat, and Python plus eight native implementations.
+
 ## Coverage limits
 
-These are representative reusable algorithms, not every mechanic from every game. The coverage table's remaining column is an explicit backlog, not completed code. All 50 have Python code and eight-language native core kernels. These are not full API replicas: batching, decoded save migration, fixed resource IDs, numeric precision and other differences are documented in PORTS.md. No third-party game code or assets were scraped. No complete multiplayer transport, deployed server, game engine, or CAD kernel has been built. No unattended researcher or background worker is configured.
+These are representative reusable algorithms, not every mechanic from every game. The coverage table's remaining column is an explicit backlog, not completed code. All 51 have Python code and eight-language native core kernels. These are not full API replicas: batching, decoded save migration, fixed resource IDs, numeric precision and other differences are documented in PORTS.md. No third-party game code or assets were scraped. No complete multiplayer transport, deployed server, game engine, or CAD kernel has been built. No unattended researcher or background worker is configured.
 
 ## Next coherent milestones
 

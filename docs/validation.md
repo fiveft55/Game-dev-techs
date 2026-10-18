@@ -1,22 +1,22 @@
 # Validation evidence
 
-Checked 19 October 2026 (Australia/Sydney) in the cloud workspace. [Machine-readable native results](native-validation.json) record the toolchains, fixture counts, outcomes and a digest of the 400 native source files plus 50 C headers.
+Checked 19 October 2026 (Australia/Sydney) in the cloud workspace. [Machine-readable native results](native-validation.json) record the toolchains, fixture counts, outcomes and a digest of the 408 native source files plus 51 C headers.
 
 ## Current edition
 
 | Check | Result |
 |---|---|
-| `python3 tools/validate.py` | **65 tests passed** under Python 3.12.14: 50 original mechanics, 4 composition checks, 4 coverage/link checks and 7 portable-specification checks |
-| `python3 tools/test_ports.py --languages all` | **148 fixtures passed in each of eight languages: 1,184 native fixture executions** across all 50 mechanics |
+| `python3 tools/validate.py` | **79 tests passed** under Python 3.12.14: 51 individual mechanics, 13 focused grid-controller tests, 4 composition checks, 4 coverage/link checks and 7 portable-specification checks |
+| `python3 tools/test_ports.py --languages all` | **163 fixtures passed in each of eight languages: 1,304 native fixture executions** across all 51 mechanics |
 | JavaScript | Node.js v24.19.0: passed |
 | TypeScript | 5.9.3 strict compilation, followed by execution in Node.js: passed |
 | C | GCC 14.2.0, C11, warnings as errors and undefined-behavior sanitizer: passed |
-| C integration | Public headers included together; all 50 separate translation units linked into one executable and invoked: passed |
+| C integration | Public headers included together; all 51 separate translation units linked into one executable and invoked: passed |
 | Lua | System Lua 5.4 library executed through the ctypes test launcher: passed |
 | C# | .NET SDK 8.0.426 Roslyn compilation plus execution on .NET 8: passed |
 | GDScript | Godot 4.6.3 headless script loading and execution: passed |
 | Rust | Rust 1.90.0, edition 2021 compilation plus execution: passed |
-| Go | Go 1.25.1, all 50 packages tested with fresh test execution and no fetched dependencies: passed |
+| Go | Go 1.25.1, all 51 packages tested with fresh test execution and no fetched dependencies: passed |
 | Generated source/contracts/fixtures | Checked against current generator/specifications: passed |
 | Genre coverage | All 22 families mapped exactly once; every catalog entry mapped and all source/documentation links exist |
 | Index freshness | Genre and mechanic indexes match catalog and coverage JSON |
@@ -36,3 +36,7 @@ No real network session, encryption handshake, engine rendering, production CAD 
 ## Earlier research evidence
 
 The first-edition source-link check recorded seven GitHub HTTP 200 responses and 18 documentation-site proxy denials. Those links were not re-fetched in this edition. See [source-link-check.json](source-link-check.json). A proxy denial does not establish that the site is unavailable generally, and an HTTP success does not establish substantive review or licensing suitability.
+
+## Grid-movement addition
+
+The new controller has 15 shared native fixtures and 13 focused Python tests plus a catalog-level behavioral test. Checks cover four directions, walls/map edges, partial and exact smooth landings, one-slot buffer replacement and expiry, release, repeated holds, explicit-state continuation, invalid requests, and equal results from long versus split updates. Instant-mode input cannot resume an unfinished smooth step. All eight native implementations executed the shared cases; no language was skipped. Drawing/input integration remains the caller's responsibility.

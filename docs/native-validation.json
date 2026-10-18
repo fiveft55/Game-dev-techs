@@ -2,14 +2,14 @@
   "checked_date": "2026-10-19",
   "timezone": "Australia/Sydney",
   "scope": "Native educational numeric kernels, not full Python API replicas or game engines",
-  "mechanics": 50,
-  "native_implementation_files": 400,
-  "c_headers": 50,
-  "fixtures_per_language": 148,
-  "native_fixture_executions": 1184,
-  "python_unittest_methods": 65,
-  "native_source_digest_sha256": "c99f4dcae5d308596f7fcdb853ee7d23a8e656506d36ecce3b7aac1709247b5a",
-  "digest_method": "Sorted relative source paths: UTF-8 path + NUL + bytes + NUL, for 400 implementation files and 50 C headers",
+  "mechanics": 51,
+  "native_implementation_files": 408,
+  "c_headers": 51,
+  "fixtures_per_language": 163,
+  "native_fixture_executions": 1304,
+  "python_unittest_methods": 79,
+  "native_source_digest_sha256": "bab2bfe02fd19cf7a3299dbba17471648e07d7f6f005f11f669736afca7f6b86",
+  "digest_method": "Sorted relative source paths: UTF-8 path + NUL + bytes + NUL, for 408 implementation files and 51 C headers",
   "toolchains": {
     "javascript": "Node.js v24.19.0",
     "typescript": "TypeScript 5.9.3, --strict, ES2020/CommonJS",
@@ -20,63 +20,63 @@
     "rust": "rustc 1.90.0, edition 2021",
     "go": "Go 1.25.1 linux/amd64, standard library only"
   },
-  "c_linkage_check": "All 50 separate translation units linked into one executable and invoked successfully",
+  "c_linkage_check": "All 51 separate translation units linked into one executable and invoked successfully",
   "results": [
     {
       "language": "javascript",
       "status": "passed",
-      "mechanics": 50,
-      "fixtures": 148,
-      "seconds": 0.06
+      "mechanics": 51,
+      "fixtures": 163,
+      "seconds": 0.04
     },
     {
       "language": "typescript",
       "status": "passed",
-      "mechanics": 50,
-      "fixtures": 148,
-      "seconds": 0.95
+      "mechanics": 51,
+      "fixtures": 163,
+      "seconds": 0.69
     },
     {
       "language": "c",
       "status": "passed",
-      "mechanics": 50,
-      "fixtures": 148,
-      "seconds": 3.85
+      "mechanics": 51,
+      "fixtures": 163,
+      "seconds": 2.54
     },
     {
       "language": "lua",
       "status": "passed",
-      "mechanics": 50,
-      "fixtures": 148,
-      "seconds": 0.04
+      "mechanics": 51,
+      "fixtures": 163,
+      "seconds": 0.03
     },
     {
       "language": "csharp",
       "status": "passed",
-      "mechanics": 50,
-      "fixtures": 148,
-      "seconds": 0.71
+      "mechanics": 51,
+      "fixtures": 163,
+      "seconds": 0.92
     },
     {
       "language": "gdscript",
       "status": "passed",
-      "mechanics": 50,
-      "fixtures": 148,
-      "seconds": 0.26
+      "mechanics": 51,
+      "fixtures": 163,
+      "seconds": 0.24
     },
     {
       "language": "rust",
       "status": "passed",
-      "mechanics": 50,
-      "fixtures": 148,
-      "seconds": 0.22
+      "mechanics": 51,
+      "fixtures": 163,
+      "seconds": 0.23
     },
     {
       "language": "go",
       "status": "passed",
-      "mechanics": 50,
-      "fixtures": 148,
-      "seconds": 2.34
+      "mechanics": 51,
+      "fixtures": 163,
+      "seconds": 1.67
     }
   ]
 }

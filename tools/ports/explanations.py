@@ -122,3 +122,11 @@ HELPERS = {
 'tan_num':'Convert a steering angle into a turning ratio; angles here are in radians.',
 'mod_num':'Return the remainder after dividing one number by another.',
 }
+
+EXPLANATIONS['grid-movement'] = (
+    'Move a character one square at a time, stopping at walls and waiting until each step is finished.',
+    ['Read one direction: up, right, down, left, or no button.',
+     'Check the next square. Stay put if it is outside the map or contains a wall.',
+     'Either jump straight to that square or slide to it over the chosen step time.',
+     'Remember the newest direction briefly if it is pressed during a step. Try it after landing.',
+     'Holding a direction waits for a short delay, then requests more steps at regular times. Releasing stops those repeats.'])
