@@ -117,3 +117,7 @@ Tests cover all four directions, walls, boundaries, partial and exact landings, 
 This is a single-actor controller on a static rectangular map. No jumping, diagonal stepping, pushing boxes, slopes, path selection, dynamic obstacles, multi-actor reservations or network authority is included. Keep configuration/map stable during a step; resolve shared occupancy outside this module. The destination becomes logically occupied only according to the policy you choose in your game; this example exposes both source and target so you can implement reservations.
 
 Original code under the root [MIT license](../../LICENSE); no third-party code or assets were copied. See [language conventions](../../docs/language-ports.md) and [source policy](../../docs/sources.md).
+
+## Optimization reading
+
+See [the relevant optimization chapter](../../docs/optimization/05-movement-ai.md) and [the current-code cost audit](../../docs/optimization/mechanics-audit.md). Suggested improvements are not automatically implemented or benchmarked here.

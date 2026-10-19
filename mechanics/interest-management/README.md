@@ -53,3 +53,7 @@ Original code written for this repository under the root [MIT license](../../LIC
 ## Portable language versions
 
 Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.
+
+## Optimization reading
+
+See [the relevant optimization chapter](../../docs/optimization/07-networking-persistence.md) and [the current-code cost audit](../../docs/optimization/mechanics-audit.md). Suggested improvements are not automatically implemented or benchmarked here.

@@ -2,6 +2,10 @@
 
 This library contains original educational code, including the 32 additional genre mechanics in the second edition. The links below are a curated reading list, not bundled dependencies. Upstream availability, current license terms, vulnerabilities, and compatibility must be checked at the exact revision before importing code. No commercial game code or extracted assets have been copied. Link checking is recorded separately and does not establish that every page was substantively reviewed.
 
+## Optimization research
+
+The [optimization handbook](optimization/README.md) includes [38 annotated research, book, official documentation and tool references](optimization/research.md), with [individual HTTP and bounded-review observations](optimization/research-links.json). It distinguishes implemented algorithms from suggested improvements and measured results from illustrative arithmetic. The handbook's [source-level audit](optimization/mechanics-audit.md) covers all 51 current mechanics; no performance speedup is claimed from documentation alone.
+
 ## Algorithms and engine architecture
 
 - https://gafferongames.com/post/fix_your_timestep/ — fixed simulation updates and interpolation.

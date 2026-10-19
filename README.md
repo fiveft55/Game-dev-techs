@@ -5,6 +5,7 @@ An evolving learning library for reusable game algorithms, game history, and dev
 - [Free movement: continuous positions and analog input](mechanics/player-movement/README.md)
 - [Grid-based movement: instant steps, smooth slides and buffered turns](mechanics/grid-movement/README.md)
 - [Beginner guide: code in plain English](docs/beginner-guide.md)
+- [Game optimization handbook: theory, techniques and research](docs/optimization/README.md)
 - [Eight-language ports and calling examples](docs/language-ports.md)
 - [Toolchains and test commands](docs/toolchains.md)
 - [Genre-to-mechanics coverage table](docs/genre-coverage.md) and [machine-readable mapping](genre-coverage.json)

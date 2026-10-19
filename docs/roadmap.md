@@ -8,6 +8,8 @@ The second edition adds 32 implementations, including platform jump timing, swep
 
 The grid-movement addition provides a persistent four-way tile controller with instant/smooth steps, wall checks, input buffering, held-key repeat, and Python plus eight native implementations.
 
+The [optimization handbook](optimization/README.md) adds profiling/benchmark methodology, theory, practical techniques, language guidance, a source-level audit of all 51 mechanics and 38 annotated reading references. It documents future experiments without claiming a benchmarked optimization implementation.
+
 ## Coverage limits
 
 These are representative reusable algorithms, not every mechanic from every game. The coverage table's remaining column is an explicit backlog, not completed code. All 51 have Python code and eight-language native core kernels. These are not full API replicas: batching, decoded save migration, fixed resource IDs, numeric precision and other differences are documented in PORTS.md. No third-party game code or assets were scraped. No complete multiplayer transport, deployed server, game engine, or CAD kernel has been built. No unattended researcher or background worker is configured.

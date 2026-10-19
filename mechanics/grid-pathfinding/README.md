@@ -32,3 +32,7 @@ Original educational implementation for this repository, distributed under the r
 ## Portable language versions
 
 Lua, C#, GDScript, TypeScript, JavaScript, C, Rust and Go implementations are documented in [PORTS.md](PORTS.md), including input/output layouts, code links, fixtures, and scope differences from this Python API.
+
+## Optimization reading
+
+See [the relevant optimization chapter](../../docs/optimization/05-movement-ai.md) and [the current-code cost audit](../../docs/optimization/mechanics-audit.md). Suggested improvements are not automatically implemented or benchmarked here.
